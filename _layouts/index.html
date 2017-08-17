@@ -57,6 +57,14 @@ layout: default
                 </figure>
               </div>
             {% endfor %}
+            {% when 'roadmap' %}
+              {% for subsection in feature.subsections %}
+                <div class="roadmap__subsection">
+                  <figure class="roadmap__subsection__figure">
+                    <img src="{{ subsection.image }}" />
+                  </figure>
+                </div>
+              {% endfor %}
           {% when 'video' %}
             {% for subsection in feature.subsections %}
               <div class="develop__subsection">
@@ -72,40 +80,18 @@ layout: default
               </div>
             {% endfor %}
         {% when 'free' %}
-          <img src="{{ feature.image }}" alt="{{ feature.title }}" class="free__image" />
           <div class="free__subsections">
             {% for subsection in feature.subsections %}
               <div class="free__subsection">
+                {{ subsection.image }}
                 <h5>{{ subsection.title }}</h5>
-                {{ subsection.body | markdownify }}
+                <small>{{ subsection.body | markdownify }}</small>
               </div>
             {% endfor %}
           </div>
-        {% when 'launch' %}
-          <div class="launch__content">{{ feature.body | markdownify }}</div>
-          <img src="{{ feature.image }}" alt="{{ feature.title }}" class="launch__image" />
-        {% when 'love' %}
-          <ul class="love__tweets">
-            {% assign sorted_tweets = site.tweets | sort:'position' %}
-            {% for tweet in sorted_tweets limit:6 %}
-              <li class="love__tweet">
-                <div class="love__tweet__card">
-                  <a href="{{ tweet.link }}">
-                    <div class="love__tweet__header">
-                      <div class="love__tweet__header__item">
-                        <img src="{{ tweet.image }}" class="love__tweet__avatar" />
-                      </div>
-                      <div class="love__tweet__header__item">
-                        <h5 class="love__tweet__name">{{ tweet.title }}</h5>
-                        <small class="love__tweet__handle">{{ tweet.handle }}</small>
-                      </div>
-                    </div>
-                  </a>
-                  <div class="love__tweet__content">{{ tweet.content | markdownify }}</div>
-                </div>
-              </li>
-            {% endfor %}
-          </ul>
+        {% when 'how' %}
+          <img src="{{ feature.image }}" style="text-align: center;" alt="{{ feature.title }}"/>
+          <a href="https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf" class="feature__button bg--dark-gray" role="button">Read the Whitepaper</a>
         {% when 'outro' %}
           {{ feature.body | markdownify }}
       {% endcase %}

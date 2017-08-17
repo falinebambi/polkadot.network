@@ -45,13 +45,17 @@ features:
   width: wide
   image: ""
   subsections:
-  - title: Minimal
+  - image: "/assets/minimal.png"
+    title: Minimal
     body: Polkadot should have as little functionality as possible
-  - title: Simple
+  - image: "/assets/simple.png"
+    title: Simple
     body: No additional complexity should be present in the base protocol.
-  - title: General
+  - image: "/assets/general.png"
+    title: General
     body: Polkadot can be optimised through making the model into which extensions fit as abstract as possible.
-  - title: Robust
+  - image: "/assets/robust.png"
+    title: Robust
     body: Polkadot should provide a fundamentally stable base-layer.
 - title: How does it work?
   handle: how
@@ -85,15 +89,12 @@ features:
 
       Pursuant to certain identity requirements forced on us by international regulations, we are happy to allow citizens and organisations of almost all jurisdictions globally the opportunity to participate in this event (we are sad to note that due to legal restrictions, we are unable to accept the contributions of citizens of Japan). We will endeavour to make the certification as  cheap, swift and convenient as possible.
     image: "/assets/dots.png"
-- handle: media
-  image: "/assets/media.png"
-
 - title: Roadmap
-  handle: outro
+  handle: token
+  background: logo
   width: wide
-  image: "/assets/roadmap.png"
-  body: |-
-      Networking subsystem
+  subsections:
+  - image: "/assets/roadmap-full.png"   
 
 layout: index
 ---

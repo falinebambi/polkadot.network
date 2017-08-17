@@ -160,9 +160,15 @@ mark {
   color: inherit;
 }
 
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 // components
 // ----------
-
 .link {
   &:hover {
     opacity: $opacity--hover;
@@ -416,7 +422,6 @@ h6 {
 }
 .feature__title {
   text-align: left;
-  margin-left: 3rem;
 }
 // intro
 .intro__subsections {
@@ -519,7 +524,6 @@ h6 {
 }
 .manage__figure {
   @extend %browser;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.08);
   opacity: 0;
   display: none;
   &.shown {
@@ -542,11 +546,8 @@ h6 {
     &:hover,
     &.active {
       h5 {
-        color: $color--blue;
+        color: #F7D7D7;
       }
-    }
-    &.active {
-      background: $color--lightest-gray;
     }
   }
 }
@@ -572,7 +573,6 @@ h6 {
 .develop__subsection__content {
   @extend %twoUpChild--text;
   .develop__subsection:nth-of-type(odd) & {
-    margin-left: $gutter*2;
     @include max-width($max-width--lg) {
       margin-left: $gutter;
     }
@@ -581,7 +581,6 @@ h6 {
     }
   }
   .develop__subsection:nth-of-type(even) & {
-    margin-right: $gutter*2;
     @include max-width($max-width--lg) {
       margin-right: $gutter;
     }
@@ -611,11 +610,69 @@ h6 {
     }
   }
 }
-.develop__logos {
-  margin-top: $v*1.5;
-  width: 100%;
-  max-width: 490px;
+
+// roadmap
+.roadmap__subsection {
+  @extend %twoUpParent;
+  &:nth-of-type(odd) {
+    @include justify-content(flex-end);
+  }
+  text-align: left;
+  h3 {
+    font-size: 2em;
+    @include max-width($max-width--sm) {
+      font-size: 1.75em;
+    }
+  }
 }
+.roadmap__subsection + .roadmap__subsection {
+  @include max-width($max-width--sm) {
+    margin-top: $v*3;
+  }
+}
+.roadmap__subsection__content {
+  @extend %twoUpChild--text;
+  .roadmap__subsection:nth-of-type(odd) & {
+    margin-left: $gutter*2;
+    @include max-width($max-width--lg) {
+      margin-left: $gutter;
+    }
+    @include max-width($max-width--md) {
+      margin-left: 0;
+    }
+  }
+  .roadmap__subsection:nth-of-type(even) & {
+    margin-right: $gutter*2;
+    @include max-width($max-width--lg) {
+      margin-right: $gutter;
+    }
+    @include max-width($max-width--md) {
+      margin-right: 0;
+    }
+  }
+  a {
+    @extend %link--underline;
+  }
+}
+.roadmap__subsection__figure {
+  @extend %browser;
+  @extend %twoUpChild--figure;
+  .roadmap__subsection:nth-of-type(odd) & {
+    margin-left: -100rem;
+    @include max-width($max-width--md) {
+      margin-left: 0;
+    }
+  }
+  .roadmap__subsection:nth-of-type(even) & {
+    @include order(1);
+    margin-right: -15rem;
+    @include max-width($max-width--md) {
+      @include order(0);
+      margin-right: 0;
+    }
+  }
+}
+
 // free
 .free__subsections {
   @extend %row;
@@ -623,12 +680,15 @@ h6 {
 .free__subsection {
   @extend %column;
   width: 25%;
-  text-align: left;
+  text-align: center;
   @include max-width($max-width--sm) {
     width: 100%;
   }
   a {
     @extend %link--underline;
+  }
+  h5 {
+  text-align: center;
   }
 }
 .free__image {
@@ -1203,11 +1263,37 @@ h6 {
 .bg--green {
   background: $color--green;
   color: $color--white;
+  background-image: url(/assets/background-dots.png);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
 }
 
 .bg--white {
   background: $color--white;
   color: #4D4D4D;
+}
+
+.bg--pink {
+  color: #4D4D4D;
+  background-image: url(/assets/background-white.png);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+}
+
+.bg--logo {
+  color: #4D4D4D;
+  background-image: url(/assets/background-logo.png);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
 }
 
 .bg--yellow {
@@ -1253,9 +1339,12 @@ h6 {
 }
 .bg--lightest-gray {
   background: $color--lightest-gray;
-}
-.bg--white {
-  background: $color--white;
+  background-image: url(/assets/background-white.png);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
 }
 a.bg--blue:hover {
   background: darken($color--blue, $darken--button);
