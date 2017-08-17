@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{% include post.html post=page %}
+{% if page.button.title %}
+  <div class="post__buttonWrap">
+    <a href="{{ page.button.url }}" class="bg--{{ page.button.color | default: 'blue' }} post__button">{{ page.button.title }}</a>
+  </div>
+{% endif %}

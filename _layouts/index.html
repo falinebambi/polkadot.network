@@ -1,0 +1,123 @@
+---
+layout: default
+---
+
+{% for feature in page.features %}
+  <div class="featureWrap{% if feature.unpad == 'bottom' %} featureWrap--unpadBottom{% endif %} bg--{{ feature.background | default:'pink' }}">
+    <section class="feature feature--{{ feature.width }} {{ feature.handle }}">
+      {% if feature.title %}<h2 class="feature__title">{{ feature.title }}</h2>{% endif %}
+      {% if feature.subtitle %}<h3 class="feature__subtitle">{{ feature.subtitle }}</h2>{% endif %}
+      {% if feature.body %}<p class="feature__body">{{ feature.body }}</h2>{% endif %}
+      {% case feature.handle %}
+        {% when 'manage' %}
+          <div class="manage__content">
+            <div class="manage__figures">
+              {% for subsection in feature.subsections %}
+                <figure class="manage__figure{% if forloop.first == true %} shown{% endif %}" data-handle="{{ subsection.handle }}">
+                  {{ subheading | markdownify }}
+                  {{ body | markdownify }}
+                  <img src="{{ subsection.image }}" />
+                </figure>
+              {% endfor %}
+            </div>
+            <div class="manage__tabs">
+              {% for subsection in feature.subsections %}
+                <div class="manage__tab{% if forloop.first == true %} active{% endif %}" data-handle="{{ subsection.handle }}">
+                  <h5>{{ subsection.title }}</h5>
+                  {{ subsection.body | markdownify }}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% when 'develop' %}
+          {% for subsection in feature.subsections %}
+            <div class="develop__subsection">
+              <div class="develop__subsection__content">
+                {{ subsection.body | markdownify }}
+                {% if subsection.logos %}
+                  <img src="{{ subsection.logos.image }}" alt="{{ subsection.logos.title }}" class="develop__logos" />
+                {% endif %}
+              </div>
+              <figure class="develop__subsection__figure">
+                <img src="{{ subsection.image }}" />
+              </figure>
+            </div>
+          {% endfor %}
+          {% when 'token' %}
+            {% for subsection in feature.subsections %}
+              <div class="develop__subsection">
+                <div class="develop__subsection__content">
+                  {{ subsection.body | markdownify }}
+                  {% if subsection.logos %}
+                    <img src="{{ subsection.logos.image }}" alt="{{ subsection.logos.title }}" class="develop__logos" />
+                  {% endif %}
+                </div>
+                <figure class="develop__subsection__figure">
+                  <img src="{{ subsection.image }}" />
+                </figure>
+              </div>
+            {% endfor %}
+          {% when 'video' %}
+            {% for subsection in feature.subsections %}
+              <div class="develop__subsection">
+                <figure class="develop__subsection__figure">
+                  <img src="{{ subsection.image }}" />
+                </figure>
+                <div class="develop__subsection__content">
+                  {{ subsection.body | markdownify }}
+                  {% if subsection.logos %}
+                    <img src="{{ subsection.logos.image }}" alt="{{ subsection.logos.title }}" class="develop__logos" />
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+        {% when 'free' %}
+          <img src="{{ feature.image }}" alt="{{ feature.title }}" class="free__image" />
+          <div class="free__subsections">
+            {% for subsection in feature.subsections %}
+              <div class="free__subsection">
+                <h5>{{ subsection.title }}</h5>
+                {{ subsection.body | markdownify }}
+              </div>
+            {% endfor %}
+          </div>
+        {% when 'launch' %}
+          <div class="launch__content">{{ feature.body | markdownify }}</div>
+          <img src="{{ feature.image }}" alt="{{ feature.title }}" class="launch__image" />
+        {% when 'love' %}
+          <ul class="love__tweets">
+            {% assign sorted_tweets = site.tweets | sort:'position' %}
+            {% for tweet in sorted_tweets limit:6 %}
+              <li class="love__tweet">
+                <div class="love__tweet__card">
+                  <a href="{{ tweet.link }}">
+                    <div class="love__tweet__header">
+                      <div class="love__tweet__header__item">
+                        <img src="{{ tweet.image }}" class="love__tweet__avatar" />
+                      </div>
+                      <div class="love__tweet__header__item">
+                        <h5 class="love__tweet__name">{{ tweet.title }}</h5>
+                        <small class="love__tweet__handle">{{ tweet.handle }}</small>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="love__tweet__content">{{ tweet.content | markdownify }}</div>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        {% when 'outro' %}
+          {{ feature.body | markdownify }}
+      {% endcase %}
+      {% if feature.button %}<a href="{{ page.button.url }}" class="feature__button bg--blue">{{ page.button.title }}</a>{% endif %}
+    </section>
+  </div>
+{% endfor %}
+
+<div id="videoModal" class="modal">
+  <div class="modal__body">
+    <div class="modal__video">
+      <iframe src="https://player.vimeo.com/video/169542999?api=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="intro"></iframe>
+    </div>
+  </div>
+</div>

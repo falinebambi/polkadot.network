@@ -1,0 +1,100 @@
+<!doctype html>
+  <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<style>
+
+small {
+  text-align: center;
+}
+
+.header-buttons {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#timer {
+    margin-left: auto;
+    margin-right: auto;
+}
+#timer div {
+    display: table-cell;
+    border: #F7D7D7;
+    border-style: solid;
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #4d4d4d;
+  	padding: 20px;
+    border-radius: 300px;
+    text-align: center;
+}
+#timer span {
+      letter-spacing: 0px;
+      color: #111111;
+  	  font-size: 20px;
+      margin-left: -4px;
+      margin-top: 16px;
+      display: block;
+    }
+@media (max-width : 667px) {
+  #timer div {
+      padding: 16px;
+      font-size: 26px !important;
+  }
+   #timer span {
+        margin-top: 2px;
+        font-size: 12px !important;
+      }
+  }
+}
+</style>
+<script>
+function makeTimer() {
+
+var endTime = new Date("August 25, 2017 12:00:00 EST");
+var endTime = (Date.parse(endTime)) / 1000;
+
+var now = new Date();
+var now = (Date.parse(now) / 1000);
+
+var timeLeft = endTime - now;
+
+var days = Math.floor(timeLeft / 86400);
+var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+
+if (hours < "10") { hours = "0" + hours; }
+if (minutes < "10") { minutes = "0" + minutes; }
+if (seconds < "10") { seconds = "0" + seconds; }
+
+$("#days").html(days + "<span></span>");
+$("#hours").html(hours + "<span></span>");
+$("#minutes").html(minutes + "<span></span>");
+$("#seconds").html(seconds + "<span></span>");
+
+}
+
+setInterval(function() { makeTimer(); }, 1000);
+</script>
+  </head>
+        <main id="page" role="main">
+          <div id="content" class="col-md-10 col-md-offset-1 header-content" data-content-field="main-content" data-collection-id="585c64f137c5816afcb642e7" data-edit-main-image="Banner">
+           <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1483464902227" id="page-585c64f137c5816afcb642e7"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-82abfe862cb09836c0fd"><div class="sqs-block-content"></div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_8_1483437049739_8605"><div class="sqs-block-content"><div id="timer">
+		    <div id="days"></div>
+		    <div id="hours"></div>
+		    <div id="minutes"></div>
+		    <div id="seconds"></div>
+			</div></div></div></div></div></div>
+      <small>Please note we require participants in the auction to verify their identity in compliance with OFAC regulation, read more here.</small>
+      <small>You can pre-verify you wallet using the button below</small>
+      <div class="header-buttons">
+      <a href="#" class="feature__button bg--dark-gray" role="button">Read the Whitepaper</a>
+      <a href="#" class="feature__button bg--dark-gray" role="button">Pre-Verify your Identity</a>
+      </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

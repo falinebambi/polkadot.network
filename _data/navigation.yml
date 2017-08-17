@@ -1,0 +1,26 @@
+header:
+- title: What is it?
+  url: /blog/
+- title: Vision
+  url: /gallery/
+- title: How does it work?
+  url: /plans/
+- title: The token
+  url: http://learn.siteleaf.com
+- title: Roadmap
+  url: https://manage.siteleaf.com
+footer:
+- title: How does it work?
+  url: /features/
+- title: Vision
+  url: http://siteleaf.dropmark.com/326718
+- title: Press Contact
+  url: /privacy/
+- title: Privacy
+  url: /terms/
+- title: Legal
+  url: http://status.siteleaf.com
+- title: Contact us
+  url: http://chat.siteleaf.com
+- title: Social
+  url: https://twitter.com/siteleaf

@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{% for post in site.posts limit:site.per_page %}
+  {% include post.html post=post is_excerpt=true %}
+{% endfor %}
+<div class="blog__buttonWrap">
+  <a href="/blog/archive/" class="bg--gray blog__button">Older posts</a>
+</div>

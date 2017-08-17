@@ -1,0 +1,76 @@
+---
+title: Siteleaf
+timezone: America/New_York
+collections:
+  gallery:
+    title: Gallery
+    output: false
+  posts:
+    title: Posts
+    output: true
+  blog_tags:
+    title: Tags
+    output: true
+  tweets:
+    title: Tweets
+    output: false
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    permalink: "/blog/:title/"
+    layout: post
+    image: 
+    description: 
+    button:
+      title: 
+      url: 
+- scope:
+    path: ''
+    type: blog_tags
+  values:
+    layout: tag
+- scope:
+    path: ''
+    type: gallery
+  values:
+    image: 
+    link: 
+url: http://www.siteleaf.com
+description: Built for developers, Loved by everyone. Supports Jekyll, user collaboration,
+  publishing to AWS S3, GitHub Pages, FTP, and more.
+permalink: pretty
+exclude:
+- Gruntfile.js
+- Gemfile
+- Gemfile.lock
+- package.json
+- README*
+- node_modules
+- ".gitignore"
+gems:
+- jekyll-seo-tag
+- jekyll-sitemap
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter: rouge
+excerpt_separator: |2+
+
+
+
+sass:
+  sass_dir: styles/
+  style: compressed
+per_page: 12
+date_format: "%b %d, %Y"
+google_analytics: UA-1666437-33
+twitter:
+  username: siteleaf
+logo: "/assets/logo.svg"
+future: true

@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<script>
+  var PLANS = {{ page.plans | jsonify }};
+</script>
+
+
+<section class="plans__questions">
+  <h2 id="questions" class="plans__questions__title">Questions</h2>
+  <div class="plans__questions__row article__content">
+    <div class="plans__questions__col">
+      {% for question in page.questions %}
+        {% if forloop.index == 4 %}
+          </div><div class="plans__questions__col">
+        {% endif %}
+        {{ question | markdownify }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
