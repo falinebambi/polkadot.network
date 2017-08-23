@@ -1,26 +1,26 @@
 header:
 - title: What is it?
-  url: /blog/
+  url:
 - title: Vision
-  url: /gallery/
+  url:
 - title: How does it work?
-  url: /plans/
+  url:
 - title: The token
-  url: http://learn.siteleaf.com
+  url:
 - title: Roadmap
-  url: https://manage.siteleaf.com
+  url: 
 footer:
 - title: How does it work?
-  url: /features/
+  url: #how
 - title: Vision
-  url: http://siteleaf.dropmark.com/326718
+  url: #Vision
 - title: Press Contact
-  url: /privacy/
+  url:
 - title: Privacy
-  url: /terms/
+  url:
 - title: Legal
-  url: http://status.siteleaf.com
+  url:
 - title: Contact us
-  url: http://chat.siteleaf.com
+  url: http://twitter.com/polkadotnetwork
 - title: Social
-  url: https://twitter.com/siteleaf
+  url: https://twitter.com/polkadotnetwork
