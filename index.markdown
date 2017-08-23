@@ -1,22 +1,17 @@
 ---
-title: Polkadot is a a heterogeneous multi-chain blockchain technology.
-header_title: Watch this space...
+title: 
+header_title:
 subtitle: |-
-color: pink
+color: dots
 background: header
 extended_header: true
 features:
-- title:  
-  handle: intro
-  background: custom
-  width: wide
-  button: true
-- title: What is it?
+- title: <center>What is it?</center>
   subtitle: Polkadot is a blockchain technology. a heterogeneous multi-chain.
   body: It consists of many parachains with potentially differing characteristics, such as ability to provide anonymity or formal verification. Transactions can be spread out across the chains, allowing many more to be processed in the same period of time. Polkadot ensures that each of these blockchains remains secure and that any dealings between the are faithfully executed. Specialised parachains called bridges can be created to link independent chains.
   handle: manage
   width: wide
-  color: blue
+  background: pinkdots
   subsections:
   - title: Relay chain
     handle: collaborate
@@ -43,7 +38,6 @@ features:
   handle: free
   background: lightest-gray
   width: wide
-  image: ""
   subsections:
   - image: "/assets/minimal.png"
     title: Minimal
@@ -57,9 +51,9 @@ features:
   - image: "/assets/robust.png"
     title: Robust
     body: Polkadot should provide a fundamentally stable base-layer.
-- title: How does it work?
+- title: <center>How does it work?</center>
   handle: how
-  background: green
+  background: pink
   width: wide
   image: "/assets/how.png"
   body: |-
@@ -90,11 +84,12 @@ features:
       Pursuant to certain identity requirements forced on us by international regulations, we are happy to allow citizens and organisations of almost all jurisdictions globally the opportunity to participate in this event (we are sad to note that due to legal restrictions, we are unable to accept the contributions of citizens of Japan). We will endeavour to make the certification as  cheap, swift and convenient as possible.
     image: "/assets/dots.png"
 - title: Roadmap
-  handle: token
+  handle: roadmap
   background: logo
   width: wide
   subsections:
-  - image: "/assets/roadmap-full.png"   
+  - body: |-
+    image: "/assets/roadmap-full.png"   
 
 layout: index
 ---

@@ -364,6 +364,11 @@ h6 {
   @include margin-center;
 }
 .header__title {
+  position: absolute;
+  color: #4D4D4D;
+  text-align: center;
+  top: 20%;
+  left: 30%;
   margin-top: $v*3.75;
   margin-bottom: $v*0.75;
   max-width: $max-width--header__title;
@@ -386,12 +391,20 @@ h6 {
   }
 }
 .header__subtitle {
+  position: absolute;
   max-width: 28rem;
+  color: #4D4D4D;
+  text-align: center;
+  top: 50%;
+  left: 30%;
   .header--extended & {
     font-size: $font-size--large;
   }
 }
 .header__buttonWrap {
+  position: absolute;
+  top: 70%;
+  left: 30%;
   margin-top: $v;
   margin-bottom: $v*0.75;
 }
@@ -625,6 +638,7 @@ h6 {
     }
   }
 }
+
 .roadmap__subsection + .roadmap__subsection {
   @include max-width($max-width--sm) {
     margin-top: $v*3;
@@ -654,23 +668,10 @@ h6 {
     @extend %link--underline;
   }
 }
-.roadmap__subsection__figure {
-  @extend %browser;
-  @extend %twoUpChild--figure;
-  .roadmap__subsection:nth-of-type(odd) & {
-    margin-left: -100rem;
-    @include max-width($max-width--md) {
-      margin-left: 0;
-    }
-  }
-  .roadmap__subsection:nth-of-type(even) & {
-    @include order(1);
-    margin-right: -15rem;
-    @include max-width($max-width--md) {
-      @include order(0);
-      margin-right: 0;
-    }
-  }
+
+.roadmap__image {
+  margin-left: -80rem;
+  width: 80%;
 }
 
 // free
@@ -694,6 +695,9 @@ h6 {
 .free__image {
   margin-top: $v*2;
   margin-bottom: $v*2;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 // launch
 .launch__content {
@@ -1271,12 +1275,33 @@ h6 {
   z-index: 1;
 }
 
+.bg--pink {
+  background: $color--pink;
+  color: $color--gray;
+  background-image: url(/assets/background-dots.png);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+}
+
 .bg--white {
   background: $color--white;
   color: #4D4D4D;
 }
 
-.bg--pink {
+.bg--pinkdots {
+  color: #4D4D4D;
+  background-image: url(/assets/background-white.png);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+}
+
+.bg--dots {
   color: #4D4D4D;
   background-image: url(/assets/background-white.png);
   width: 100%;

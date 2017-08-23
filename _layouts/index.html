@@ -60,9 +60,7 @@ layout: default
             {% when 'roadmap' %}
               {% for subsection in feature.subsections %}
                 <div class="roadmap__subsection">
-                  <figure class="roadmap__subsection__figure">
-                    <img src="{{ subsection.image }}" />
-                  </figure>
+                    <img src="{{ subsection.image }}" alt="{{ subsection.title }}" class="roadmap__image" />
                 </div>
               {% endfor %}
           {% when 'video' %}
@@ -83,14 +81,14 @@ layout: default
           <div class="free__subsections">
             {% for subsection in feature.subsections %}
               <div class="free__subsection">
-                {{ subsection.image }}
+                  <img src="{{ subsection.image }}" alt="{{ subsection.title }}" class="free__image" />
                 <h5>{{ subsection.title }}</h5>
                 <small>{{ subsection.body | markdownify }}</small>
               </div>
             {% endfor %}
           </div>
         {% when 'how' %}
-          <img src="{{ feature.image }}" style="text-align: center;" alt="{{ feature.title }}"/>
+          <img src="{{ feature.image }}" style="max-width: 80%; margin-left: auto; margin-right: auto;" alt="{{ feature.title }}"/>
           <a href="https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf" class="feature__button bg--dark-gray" role="button">Read the Whitepaper</a>
         {% when 'outro' %}
           {{ feature.body | markdownify }}
@@ -99,11 +97,3 @@ layout: default
     </section>
   </div>
 {% endfor %}
-
-<div id="videoModal" class="modal">
-  <div class="modal__body">
-    <div class="modal__video">
-      <iframe src="https://player.vimeo.com/video/169542999?api=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="intro"></iframe>
-    </div>
-  </div>
-</div>
