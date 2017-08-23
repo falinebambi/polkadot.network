@@ -9,17 +9,17 @@
     <br>
     <div id="content" class="timer" style="text-align: center;" data-content-field="main-content" data-collection-id="585c64f137c5816afcb642e7" data-edit-main-image="Banner">
      <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1483464902227" id="page-585c64f137c5816afcb642e7"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-82abfe862cb09836c0fd"><div class="sqs-block-content"></div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_8_1483437049739_8605"><div class="sqs-block-content"><div id="timer">
-  <div id="days">days</div>
-  <div id="hours">hours</div>
-  <div id="minutes">minutes</div>
-  <div id="seconds">seconds</div>
+  <div id="days" class="counter">days</div>
+  <div id="hours" class="counter">hours</div>
+  <div id="minutes" class="counter">minutes</div>
+  <div id="seconds" class="counter">seconds</div>
 </div></div></div></div></div></div>
     </div>
     <p class="header__subtitle">Please note we require participants in the auction to verify their identity in compliance with OFAC regulation, read more here.
     You can pre-verify you wallet using the button below</p>
     <div class="header-buttons">
-    <a href="https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf" class="header__buttonWrap feature__button bg--dark-gray" role="button">Read the Whitepaper</a>
-    <a href="#" class="header__buttonWrap feature__button bg--dark-gray" role="button">Pre-Verify your Identity</a>
+    <a href="https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf" class="header__buttonWrap__left feature__button bg--dark-gray" role="button">Read the Whitepaper</a>
+    <a href="#" class="header__buttonWrap__right feature__button bg--dark-gray" role="button">Pre-Verify your Identity</a>
     <div class="dots">
     </div>
     </div>
@@ -42,34 +42,27 @@ canvas {
   margin-right: auto;
 }
 
+.counter {
+  display: table-cell;
+  margin:1.5%;
+  font-size:50px;
+  background-color: white;
+  border: 4px solid #F7D7D7;
+  color: #4D4D4D;
+  width:150px;
+  border-radius: 50%;
+  height:150px;
+  vertical-align: middle;
+}
+
 #timer {
-    background-color: white;
     position: absolute;
-    top:50%;
-    left:35%;
+    top:22rem;
+    left:28rem;
     margin-left: auto;
     margin-right: auto;
 }
-#timer div {
-    display: table-cell;
-    border: #F7D7D7;
-    border-style: solid;
-    font-size: 50px;
-    letter-spacing: 2px;
-    font-weight: 500;
-    color: #4d4d4d;
-  	padding: 20px;
-    border-radius: 300px;
-    text-align: center;
-}
-#timer span {
-      letter-spacing: 0px;
-      color: #111111;
-  	  font-size: 20px;
-      margin-left: -4px;
-      margin-top: 16px;
-      display: block;
-    }
+
 @media (max-width : 667px) {
   #timer div {
       padding: 16px;

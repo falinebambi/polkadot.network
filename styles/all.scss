@@ -395,23 +395,31 @@ h6 {
   max-width: 30rem;
   color: #4D4D4D;
   text-align: center;
-  top: 50%;
-  left: 30%;
+  top: 30rem;
+  left: 28rem;
   margin-top: 5%;
   .header--extended & {
     font-size: $font-size--large;
   }
 }
-.header__buttonWrap {
+.header__buttonWrap__left {
   position: absolute;
-  top: 90%;
-  left: 30%;
+  top: 40rem;
+  left: 25rem;
   margin-top: 10%;
 
   margin-top: $v;
   margin-bottom: $v*0.75;
 }
+.header__buttonWrap__right {
+  position: absolute;
+  top: 40rem;
+  left: 45rem;
+  margin-top: 10%;
 
+  margin-top: $v;
+  margin-bottom: $v*0.75;
+}
 // home
 // ----
 
@@ -564,7 +572,7 @@ h6 {
     &:hover,
     &.active {
       h5 {
-        color: #F7D7D7;
+        color:;
       }
     }
   }
