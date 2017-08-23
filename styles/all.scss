@@ -392,19 +392,22 @@ h6 {
 }
 .header__subtitle {
   position: absolute;
-  max-width: 28rem;
+  max-width: 30rem;
   color: #4D4D4D;
   text-align: center;
   top: 50%;
   left: 30%;
+  margin-top: 5%;
   .header--extended & {
     font-size: $font-size--large;
   }
 }
 .header__buttonWrap {
   position: absolute;
-  top: 70%;
+  top: 90%;
   left: 30%;
+  margin-top: 10%;
+
   margin-top: $v;
   margin-bottom: $v*0.75;
 }
@@ -435,6 +438,8 @@ h6 {
 }
 .feature__title {
   text-align: left;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 // intro
 .intro__subsections {
