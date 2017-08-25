@@ -42,7 +42,29 @@ layout: default
                 <img src="{{ subsection.image }}" />
               </figure>
             </div>
+            <div class="free__subsections">
+              {% for subsection in feature.subsections %}
+                <div class="free__subsection">
+                    <img src="{{ subsection.image }}" alt="{{ subsection.title }}" class="free__image" />
+                  <h5>{{ subsection.title }}</h5>
+                  <small>{{ subsection.body | markdownify }}</small>
+                </div>
+            </div>
           {% endfor %}
+          {% when 'auction' %}
+            {% for subsection in feature.subsections %}
+              <div class="develop__subsection">
+                <div class="develop__subsection__content">
+                  {{ subsection.body | markdownify }}
+                  {% if subsection.logos %}
+                    <img src="{{ subsection.logos.image }}" alt="{{ subsection.logos.title }}" class="develop__logos" />
+                  {% endif %}
+                </div>
+                <figure class="develop__subsection__figure">
+                  <img src="{{ subsection.image }}" />
+                </figure>
+              </div>
+            {% endfor %}
           {% when 'token' %}
             {% for subsection in feature.subsections %}
               <div class="develop__subsection">
@@ -77,18 +99,8 @@ layout: default
                 </div>
               </div>
             {% endfor %}
-        {% when 'free' %}
-          <div class="free__subsections">
-            {% for subsection in feature.subsections %}
-              <div class="free__subsection">
-                  <img src="{{ subsection.image }}" alt="{{ subsection.title }}" class="free__image" />
-                <h5>{{ subsection.title }}</h5>
-                <small>{{ subsection.body | markdownify }}</small>
-              </div>
-            {% endfor %}
-          </div>
         {% when 'how' %}
-          <img src="{{ feature.image }}" style="max-width: 80%; margin-left: auto; margin-right: auto;" alt="{{ feature.title }}"/>
+          <img src="{{ feature.image }}" style="max-width: 80%; margin-left: auto; margin-right: auto; padding-top:10%; padding-bottom:10%;" alt="{{ feature.title }}"/>
           <a href="https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf" class="feature__button bg--dark-gray" role="button">Read the Whitepaper</a>
         {% when 'outro' %}
           {{ feature.body | markdownify }}

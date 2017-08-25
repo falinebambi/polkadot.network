@@ -357,6 +357,7 @@ h6 {
 }
 .header__logo {
   width: $width--logo;
+  padding-left: 1rem;
 }
 .header__title,
 .header__subtitle {
@@ -366,14 +367,10 @@ h6 {
 .header__title {
   position: absolute;
   color: #4D4D4D;
-  text-align: center;
   top: 20%;
-  left: 30%;
+  left: 32%;
   margin-top: $v*3.75;
   margin-bottom: $v*0.75;
-  max-width: $max-width--header__title;
-  padding-left: $width--logo * 1.2;
-  padding-right: $width--logo * 1.2;
   .header--extended & {
     max-width: 34rem;
     margin-top: $v*4.75;
@@ -381,8 +378,8 @@ h6 {
     padding-right: 0;
   }
   @include max-width($max-width--sm) {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 5%;
+    top: 25%;
     margin-top: $v*0.75;
     .header--extended & {
       margin-top: $v*0.75;
@@ -395,30 +392,43 @@ h6 {
   max-width: 30rem;
   color: #4D4D4D;
   text-align: center;
-  top: 30rem;
-  left: 28rem;
+  top: 40rem;
+  left: 26%;
   margin-top: 5%;
   .header--extended & {
     font-size: $font-size--large;
   }
+  @include max-width($max-width--sm) {
+    left: 0rem;
+    top: 25rem;
+    padding: 5%;
+  }
 }
+
 .header__buttonWrap__left {
   position: absolute;
   top: 40rem;
-  left: 25rem;
+  left: 25%;
   margin-top: 10%;
 
   margin-top: $v;
   margin-bottom: $v*0.75;
+  @include max-width($max-width--sm) {
+    left: 2.9rem;
+    top: 35rem;
+  }
 }
 .header__buttonWrap__right {
   position: absolute;
   top: 40rem;
-  left: 45rem;
+  left: 55%;
   margin-top: 10%;
 
   margin-top: $v;
   margin-bottom: $v*0.75;
+  @include max-width($max-width--sm) {
+    left: 2.5rem;
+  }
 }
 // home
 // ----
@@ -1439,6 +1449,8 @@ body {
 
 .container {
   @extend %container;
+  padding-left: 0;
+  padding-right: 0;
 }
 .container--narrow {
   @extend %container--narrow;
