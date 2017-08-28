@@ -367,10 +367,13 @@ h6 {
 .header__title {
   position: absolute;
   color: #4D4D4D;
-  top: 20%;
-  left: 32%;
+  top: 16%;
+  left: 28%;
   margin-top: $v*3.75;
   margin-bottom: $v*0.75;
+  max-width: $max-width--header__title;
+  padding-left: $width--logo * 1.2;
+  padding-right: $width--logo * 1.2;
   .header--extended & {
     max-width: 34rem;
     margin-top: $v*4.75;
@@ -389,12 +392,11 @@ h6 {
 }
 .header__subtitle {
   position: absolute;
-  max-width: 30rem;
+  max-width: 40rem;
   color: #4D4D4D;
   text-align: center;
-  top: 40rem;
-  left: 26%;
-  margin-top: 5%;
+  top: 32rem;
+  left: 28%;
   .header--extended & {
     font-size: $font-size--large;
   }

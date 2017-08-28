@@ -143,6 +143,7 @@ body {
 }
 
 canvas {
+  background-color: #F7D7D7;
   float: left;
   margin-bottom: 5%;
 }
@@ -167,17 +168,16 @@ canvas {
 
 #timer {
     position: absolute;
-    top:22rem;
-    left:30%;
+    top:40%;
+    left:35%;
     margin-left: auto;
     margin-right: auto;
 }
 
 #timer span {
       letter-spacing: 0px;
-      color: #111111;
+      color: #4D4D4D;
   	  font-size: 20px;
-      margin-left: -4px;
       display: block;
     }
 
@@ -470,7 +470,7 @@ setInterval(function() { makeTimer(); }, 1000);
       
       <p class="feature__body">Polkadot is a protocol that allows independent blockchains to exchange information. Polkadot is an inter-chain blockchain protocol which unlike internet messaging protocols (e.g. TCP/IP) also enforces the order and the validity of the messages between the chains. This inter-operability also allows the additional benefit of scalability by creating a general environment for multiple state machines.  </h2>
       
-          <img src="/assets/how.png" style="max-width: 80%; margin-left: auto; margin-right: auto;" alt="<center>How does it work?</center>"/>
+          <img src="/assets/how.png" style="max-width: 80%; margin-left: auto; margin-right: auto; padding-top:10%; padding-bottom:10%;" alt="<center>How does it work?</center>"/>
           <a href="https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf" class="feature__button bg--dark-gray" role="button">Read the Whitepaper</a>
         
       
@@ -503,11 +503,30 @@ setInterval(function() { makeTimer(); }, 1000);
   </div>
 
   <div class="featureWrap bg--lightest-gray">
-    <section class="feature feature--wide auction">
+    <section class="feature feature--wide develop">
       <h2 class="feature__title">The Auction</h2>
       
       
       
+          
+            <div class="develop__subsection">
+              <div class="develop__subsection__content">
+                <p>The sale will be a “spend-all second-price Dutch auction” where a fixed amount representing 50% of the total genesis block allocation of tokens will be sold. We will certainly accept Ether in the sale; other crypto-currencies may also be accepted depending on technical feasibility and timeline.</p>
+
+<p>We are targeting mid-August for the start of the sale; we intend to issue a 14-day countdown once we have the specific date nailed down.</p>
+
+<p>As a form of Dutch auction, the token price (and therefore “cap”) starts high and decreases over time until all tokens are sold. The timetable of how fast the price reduces is predefined, starting fast and getting slower over time. The final details, including identity requirements and auction timetable will be published along with the specific date that the sale will begin in the near future.</p>
+
+<p>Pursuant to certain identity requirements forced on us by international regulations, we are happy to allow citizens and organisations of almost all jurisdictions globally the opportunity to participate in this event (we are sad to note that due to legal restrictions, we are unable to accept the contributions of citizens of Japan). We will endeavour to make the certification as  cheap, swift and convenient as possible.</p>
+
+                
+              </div>
+              <figure class="develop__subsection__figure">
+                <img src="/assets/dots.png" />
+              </figure>
+            </div>
+          
+          
       
     </section>
   </div>
@@ -566,7 +585,6 @@ setInterval(function() { makeTimer(); }, 1000);
   </footer>
 </div>
 
-    
     <script src="/scripts/all.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</script>
   </body>

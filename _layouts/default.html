@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {% seo title=false %}
     {% unless page.image %}<meta name="twitter:image" content="{{ site.url }}/assets/avatar.png"/>{% endunless %}
-    <title>{{ page.title }}{% if page.url != '/' %} - Siteleaf{% endif %}</title>
+    <title>{{ page.title }}{% if page.url != '/' %} - Polkadot{% endif %}</title>
     {% if page.url == '/plans/' %}<link rel="stylesheet" href="/styles/plan-summary-cards.css" />{% endif %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/styles/all.css" />
@@ -29,7 +29,6 @@
       {{ content }}
     </div>
     {% include footer.html %}
-    {% if page.url == '/plans/' %}<script src="/scripts/plan-summary-cards.js"></script>{% endif %}
     <script src="/scripts/all.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</script>
   </body>

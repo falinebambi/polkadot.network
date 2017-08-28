@@ -1,14 +1,14 @@
 header:
 - title: What is it?
-  url:
+  handle:
 - title: Vision
-  url:
+  handle: vision
 - title: How does it work?
-  url:
+  handle: how
 - title: The token
-  url:
+  handle: token
 - title: Roadmap
-  url: 
+  handle: roadmap
 footer:
 - title: How does it work?
   url: #how

@@ -34,6 +34,10 @@ features:
   - body: |-
       A truly decentralised (“server-less”) and inclusive vision of the Internet society, facilitating privacy and resistance in the face of censorship and oppression. Services being built with multiple communicating blockchains, sharing information via smart contracts, not held back by the limits of individual chain scalability.
     image: "/assets/video.png"
+- title:
+  handle: free
+  background: lightest-gray
+  width: wide
   subsections:
   - image: "/assets/minimal.png"
     title: Minimal
@@ -66,7 +70,7 @@ features:
 
     image: "/assets/tokens.png"
 - title: The Auction
-  handle: auction
+  handle: develop
   background: lightest-gray
   width: wide
   subsections:
