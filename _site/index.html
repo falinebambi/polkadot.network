@@ -13,9 +13,9 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Siteleaf" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@siteleaf" />
+<meta name="twitter:site" content="@Polkadot" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"WebSite","name":"Siteleaf","headline":"Siteleaf","description":"Built for developers, Loved by everyone. Supports Jekyll, user collaboration, publishing to AWS S3, GitHub Pages, FTP, and more.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/logo.svg"}},"url":"http://localhost:4000/"}</script>
+{"@context":"http://schema.org","@type":"WebSite","name":"Siteleaf","headline":"Siteleaf","description":"Built for developers, Loved by everyone. Supports Jekyll, user collaboration, publishing to AWS S3, GitHub Pages, FTP, and more.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/avatar.png"}},"url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="twitter:image" content="http://localhost:4000/assets/avatar.png"/>
@@ -68,7 +68,7 @@
         <a id="mobileNavOpen" class="header__link">Menu</a>
       </li>
     </ul>
-    <a href="/" class="header__home"><img src="/assets/logo.svg" class="header__logo" alt="Siteleaf" /></a>
+    <a href="/" class="header__home"><img src="/assets/avatar.png" class="header__logo" alt="Siteleaf" /></a>
     <h1 class="header__title"></h1>
     <div class="header__subtitle">
 </div>
@@ -108,241 +108,151 @@
   </nav>
 </div>
 
-      <!doctype html>
-  <head><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script></head>
-  <body>
-
-    <div class="container";>
-    <canvas>
-    </canvas>
-    <h1 class="header__title">Watch this space...</h1>
-    <br>
-    <div id="content" class="timer" style="text-align: center;" data-content-field="main-content" data-collection-id="585c64f137c5816afcb642e7" data-edit-main-image="Banner">
-     <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1483464902227" id="page-585c64f137c5816afcb642e7"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-82abfe862cb09836c0fd"><div class="sqs-block-content"></div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_8_1483437049739_8605"><div class="sqs-block-content"><div id="timer">
-  <div id="days" class="counter"></div>
-  <div id="hours" class="counter"></div>
-  <div id="minutes" class="counter"></div>
-  <div id="seconds" class="counter"></div>
-</div></div></div></div></div></div>
+      <div class="dots">
+  <h1 class="header__title">Watch this space...</h1>
+  <br>
+  <div id="content" class="timer" style="text-align: center;" data-content-field="main-content" data-collection-id="585c64f137c5816afcb642e7" data-edit-main-image="Banner">
+    <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1483464902227" id="page-585c64f137c5816afcb642e7">
+      <div class="row sqs-row">
+        <div class="col sqs-col-12 span-12">
+          <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-82abfe862cb09836c0fd">
+            <div class="sqs-block-content"></div>
+          </div>
+          <div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_8_1483437049739_8605">
+            <div class="sqs-block-content">
+              <div id="timer">
+                <div id="days" class="counter"></div>
+                <div id="hours" class="counter"></div>
+                <div id="minutes" class="counter"></div>
+                <div id="seconds" class="counter"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <p class="header__subtitle">Please note we require participants in the auction to verify their identity in compliance with OFAC regulation, read more here.
-    You can pre-verify you wallet using the button below</p>
-    <div class="header-buttons">
-    <a href="https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf" class="header__buttonWrap__left feature__button bg--dark-gray" role="button">Read the Whitepaper</a>
-    <a href="#" class="header__buttonWrap__right feature__button bg--dark-gray" role="button">Pre-Verify your Identity</a>
-    <div class="dots">
-    </div>
-    </div>
-
-
-<style>
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-canvas {
-  background-color: #F7D7D7;
-  float: left;
-  margin-bottom: 5%;
-}
-
-.header-buttons {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.counter {
-  display: table-cell;
-  margin:1.5%;
-  font-size:50px;
-  background-color: white;
-  border: 4px solid #F7D7D7;
-  color: #4D4D4D;
-  width:150px;
-  border-radius: 50%;
-  height:150px;
-  vertical-align: middle;
-}
-
-#timer {
-    position: absolute;
-    top:40%;
-    left:35%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#timer span {
-      letter-spacing: 0px;
-      color: #4D4D4D;
-  	  font-size: 20px;
-      display: block;
-    }
-
-@media (max-width : 667px) {
-  #timer {
-      left: 1.5rem;
-      top: 18rem;
-  }
-  #timer div {
-      padding: 16px;
-      font-size: 26px !important;
-  }
-   #timer span {
-        margin-top: 2px;
-        font-size: 12px !important;
-      }
-    canvas {
-        width: 100%;
-      }
-    .counter {
-      width: 95px;
-      height: 95px;
-    }
-  }
-
-
-</style>
-
-
+  </div>
+  <p class="header__subtitle">Please note we require participants in the auction to verify their identity in compliance with OFAC regulation, read more here. <br><br>You can pre-verify you wallet using the button below</p>
+</div>
 <script>
+  function makeTimer() {
 
-var canvas = document.getElementsByTagName('canvas')[0];
-var ctx = canvas.getContext('2d');
+    var endTime = new Date("September 15, 2017 12:00:00 EST");
+    var endTime = (Date.parse(endTime)) / 1000;
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-canvas.style.background = '#F7D7D7';
+    var now = new Date();
+    var now = (Date.parse(now) / 1000);
 
-var dot = {
-    size: 20,
-    color: 'white'
-};
-dot.distX = dot.size * 4;
-dot.distY = Math.sqrt(dot.size * dot.size * 16 - (dot.size * dot.size * 4));
+    var timeLeft = endTime - now;
 
-var dots = [];
+    var days = Math.floor(timeLeft / 86400);
+    var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+    var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
+    var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
 
-var mouse = {
-    posX: canvas.width/2,
-    posY: canvas.height/2,
-    scroll: 400
-};
-
-
-
-
-
-function initialize() {
-    //generate dots
-    for (var i = 0; i < canvas.width + dot.size*4; i += dot.distX) {
-        for (var j = 0, a = 0; j < canvas.height + dot.size*4; j += dot.distY, a++) {
-            dots.push({
-                posX: (a%2 === 0) ? i : i + dot.distX/2,
-                posY: j
-            });
-        }
+    if (hours < "10") {
+      hours = "0" + hours;
     }
-}
-
-
-
-function render() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    //render dots
-    for (var i = 0; i < dots.length; i++) {
-        var dist = Math.sqrt(Math.pow(mouse.posX - dots[i].posX, 2) + Math.pow(mouse.posY - dots[i].posY, 2));
-        var size = dist/mouse.scroll * dot.size*3;
-        var size = (size > dot.size*2.5) ? dot.size*2.5 : size;
-
-        ctx.beginPath();
-        ctx.arc(dots[i].posX, dots[i].posY, size, 0, 2*Math.PI);
-        ctx.fillStyle = dot.color;
-        ctx.fill();
+    if (minutes < "10") {
+      minutes = "0" + minutes;
     }
-}
-
-
-
-document.onmousemove = function(ev) {
-    mouse.posX = ev.pageX - canvas.offsetLeft;
-    mouse.posY = ev.pageY - canvas.offsetTop;
-
-    if (window.requestAnimationFrame) {
-        requestAnimationFrame(render);
-    } else {
-        render();
+    if (seconds < "10") {
+      seconds = "0" + seconds;
     }
-};
 
+    $("#days").html(days + "<span>days</span>");
+    $("#hours").html(hours + "<span>hours</span>");
+    $("#minutes").html(minutes + "<span>minutes</span>");
+    $("#seconds").html(seconds + "<span>seconds</span>");
 
-if (canvas.addEventListener) {
-	// IE9, Chrome, Safari, Opera
-	canvas.addEventListener("mousewheel", MouseWheelHandler, false);
-	// Firefox
-	canvas.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
-} else {
-    // IE 6/7/8
-    canvas.attachEvent("onmousewheel", MouseWheelHandler);
-}
+  }
 
-function MouseWheelHandler(e) {
-	// cross-browser wheel delta
-	var e = window.event || e; // old IE support
-	var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-
-    mouse.scroll += delta * 15;
-    mouse.scroll = Math.abs(mouse.scroll);
-
-    render();
-}
-
-
-
-initialize();
-render();
+  setInterval(function() {
+    makeTimer();
+  }, 1000);
 </script>
-<script>
-function makeTimer() {
-
-var endTime = new Date("September 15, 2017 12:00:00 EST");
-var endTime = (Date.parse(endTime)) / 1000;
-
-var now = new Date();
-var now = (Date.parse(now) / 1000);
-
-var timeLeft = endTime - now;
-
-var days = Math.floor(timeLeft / 86400);
-var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
-var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
-var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
-
-if (hours < "10") { hours = "0" + hours; }
-if (minutes < "10") { minutes = "0" + minutes; }
-if (seconds < "10") { seconds = "0" + seconds; }
-
-$("#days").html(days + "<span>days</span>");
-$("#hours").html(hours + "<span>hours</span>");
-$("#minutes").html(minutes + "<span>minutes</span>");
-$("#seconds").html(seconds + "<span>seconds</span>");
-
-}
-
-setInterval(function() { makeTimer(); }, 1000);
-</script>
-</body>
-</html>
 
       
-  <div class="featureWrap bg--pinkdots">
+  <div class="featureWrap bg--dark-gray">
+    <section class="feature feature--wide cta">
+      
+      
+      
+      
+              <div class="header-buttons">
+                <div class="col-md-12 row centered">
+                  <div class="col-md-6">
+                <a href="https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf" class="feature__button bg--magenta" role="button">Read the Whitepaper</a>
+                </div>
+                <div class="col-md-6">
+                <a href="#" class="feature__button bg--magenta" role="button">Pre-Verify your Identity</a>
+                </div>
+              </div>
+              </div>
+              
+          
+    </section>
+  </div>
+
+  <div class="featureWrap bg--dots-2">
+    <section class="feature feature--wide auction">
+      <h2 class="feature__title">The Auction</h2>
+      
+      
+      
+            
+              <div class="develop__subsection">
+                <div class="develop__subsection__content">
+                  <p>In the sale, a fixed amount of tokens is sold. 5 million out of the total 10 million DOTs allocated at Genesis time will be sold. The tokens will be split between each participant in the sale, relative to how much they spend. For example, if the sale ends with just three participants, Alice (who spent 20 ETH), Bob (30 ETH) and Charlie (50 ETH), then they would receive, respectively, 1 million DOTs, 1.5 million DOTs and 2.5 million DOTs).
+<br /><br />
+The sale is capped, meaning that it will close once a certain amount of ETH has been raised. However, unlike normal capped sales, the cap changes over time; it begins very high and then decreases, fast at first and then more slowly. To avoid an “immediate ending”, the initial cap is so high as to make it impossible for anyone to force the sale’s end by spending (around $16b at current prices). Within a week of so, the cap is less than $50m.
+<br /><br />
+The sale will include an initial “happy hour”, whereby all amounts of ETH spent by participants will be raised by 15%. For example, Alice spends 100 ETH within the first hour, whereas Bob spends 115 ETH after the first hour. Both Alice and Bob will receive the same amount of DOT tokens.</p>
+
+                  
+                </div>
+                <figure class="develop__subsection__figure">
+                  <img src="/assets/auction.svg" />
+                  <p>(y axis) the initial offer price vs the current bid price (x axis) the current number of dots sold vs the total number of dots being offered for sale. <br /><br /> Please note the auction will end at the point that the current price matches the total number of tokens being offered in this sale (5 million). <br /><br /> <small>* target raise is calculated as 5M tokens for sale * current end price.<br /> ** “raised so far” includes the bonuses</small></p>
+
+                </figure>
+              </div>
+            
+            
+    </section>
+  </div>
+
+  <div class="featureWrap bg--dots">
+    <section class="feature feature--wide technicals">
+      <h2 class="feature__title"><div class="technicals-header">Technicals</div></h2>
+      
+      
+      
+              
+                <div class="develop__subsection">
+                  <figure class="technicals__subsection__figure">
+                    <img src="/assets/dots.svg" style="max-width: 70%;"/>
+                  </figure>
+                  <div class="develop__subsection__content">
+                    <p>More formally, the sale is a “spend-all second-price Dutch auction”. In the auction, 5 million out of the total 10 million DOT tokens allocated at Genesis time will be sold. As an auction, by the time is finishes, it finds a “price” in order that all 5 million DOTs are happily sold. The second-price Dutch auction part basically means that the provisional price at which tokens are offered starts high and lowers throughout the auction period in a predefined schedule. The auction closes once the orders received at the current provisional price are enough to purchase the entire 5 million DOTs.
+<br /><br />
+Unlike normal second-price Dutch auctions, you don’t bid on a number of DOT tokens given a current provisional price (which will never increase, only decrease), but rather you bid on an amount to spend, and thus will receive more DOT tokens as the auction continues and the price lowers. Everyone who participates receives the same buy-in price, which is the price that the auction ends on.
+<br /><br />
+Pursuant to certain identity requirements forced on us by international regulations, we are happy to allow citizens and organisations of almost all jurisdictions globally the opportunity to participate in this event (we are sad to note that due to legal restrictions, we are unable to accept the contributions of citizens of Japan). We will endeavour to make the certification as cheap, swift and convenient as possible.</p>
+
+                    
+                  </div>
+                </div>
+              
+            
+    </section>
+  </div>
+
+  <div class="featureWrap bg--light-gray">
     <section class="feature feature--wide manage">
-      <h2 class="feature__title"><center>What is it?</center></h2>
-      <h3 class="feature__subtitle">Polkadot is a blockchain technology. a heterogeneous multi-chain.</h2>
-      <p class="feature__body">It consists of many parachains with potentially differing characteristics, such as ability to provide anonymity or formal verification. Transactions can be spread out across the chains, allowing many more to be processed in the same period of time. Polkadot ensures that each of these blockchains remains secure and that any dealings between the are faithfully executed. Specialised parachains called bridges can be created to link independent chains.</h2>
+      <h2 class="feature__title">What is it?</h2>
+      <h3 class="feature__subtitle">Polkadot is a blockchain technology. <br>a heterogeneous multi-chain.</h3>
+      <p class="feature__body">It consists of many parachains with potentially differing characteristics, such as ability to provide anonymity or formal verification. Transactions can be spread out across the chains, allowing many more to be processed in the same period of time. Polkadot ensures that each of these blockchains remains secure and that any dealings between the are faithfully executed. Specialised parachains called bridges can be created to link independent chains.</p>
       
           <div class="manage__content">
             <div class="manage__figures">
@@ -352,7 +262,7 @@ setInterval(function() { makeTimer(); }, 1000);
 
                   
 
-                  <img src="/assets/protocol.png" />
+                  <img src="/assets/protocol-1.svg" style="max-width: 75%;"/>
                 </figure>
               
                 <figure class="manage__figure" data-handle="preview">
@@ -360,7 +270,7 @@ setInterval(function() { makeTimer(); }, 1000);
 
                   
 
-                  <img src="/assets/protocol.png" />
+                  <img src="/assets/protocol-2.svg" style="max-width: 75%;"/>
                 </figure>
               
                 <figure class="manage__figure" data-handle="edit">
@@ -368,26 +278,26 @@ setInterval(function() { makeTimer(); }, 1000);
 
                   
 
-                  <img src="/assets/protocol.png" />
+                  <img src="/assets/protocol-3.svg" style="max-width: 75%;"/>
                 </figure>
               
             </div>
             <div class="manage__tabs">
               
                 <div class="manage__tab active" data-handle="collaborate">
-                  <h5>Relay chain</h5>
+                  <h3><img src="assets/one.svg">Relay chain</h3>
                   <p>Coordinates consensus and transaction delivery between chains</p>
 
                 </div>
               
                 <div class="manage__tab" data-handle="preview">
-                  <h5>Parachains</h5>
+                  <h3><img src="assets/two.svg">Parachains</h3>
                   <p>Constituent blockchains which gather and process transactions</p>
 
                 </div>
               
                 <div class="manage__tab" data-handle="edit">
-                  <h5>Bridges</h5>
+                  <h3><img src="assets/three.svg">Bridges</h3>
                   <p>Link to blockchains with their own consensus such as Ethereum</p>
 
                 </div>
@@ -395,34 +305,33 @@ setInterval(function() { makeTimer(); }, 1000);
             </div>
           </div>
         
-      
     </section>
   </div>
 
-  <div class="featureWrap bg--lightest-gray">
-    <section class="feature feature--wide develop">
+  <div class="featureWrap bg--dots">
+    <section class="feature feature--wide vision">
       <h2 class="feature__title">Polkadot Vision</h2>
       
       
       
           
             <div class="develop__subsection">
-              <div class="develop__subsection__content">
-                <p>A truly decentralised (“server-less”) and inclusive vision of the Internet society, facilitating privacy and resistance in the face of censorship and oppression. Services being built with multiple communicating blockchains, sharing information via smart contracts, not held back by the limits of individual chain scalability.</p>
+              <div class="vision__subsection__content">
+                <p>A truly decentralised internet where independent blockchains are exchanging information and enable trust-free transactions via smart contracts, with the key enabling tenets of scalability, governance and inter-operability.</p>
 
-                
+<p>Polkadot is a minimal global consensus layer which provides pooled security that is equal to all members, regardless of the protocol they operate on. It also enables trust-free transactions between all its member chains through decentralised consensus. Consensus in Polkadot is reached via a Proof of Stake mechanism that utilizes network tokens called DOTs.</p>
+
               </div>
               <figure class="develop__subsection__figure">
-                <img src="/assets/video.png" />
+                <iframe width="660" height="400" src="https://www.youtube.com/embed/lIghiCmHz0U?rel=0" frameborder="0" allowfullscreen></iframe>
               </figure>
             </div>
           
           
-      
     </section>
   </div>
 
-  <div class="featureWrap bg--lightest-gray">
+  <div class="featureWrap bg--dots">
     <section class="feature feature--wide free">
       
       
@@ -431,122 +340,189 @@ setInterval(function() { makeTimer(); }, 1000);
           <div class="free__subsections">
             
               <div class="free__subsection">
-                  <img src="/assets/minimal.png" alt="Minimal" class="free__image" />
-                <h5>Minimal</h5>
-                <small><p>Polkadot should have as little functionality as possible</p>
-</small>
+                  <img src="/assets/minimal.svg" alt="Minimal" class="free__image" />
+                <h3>Minimal</h3>
+                <p><p>Polkadot should have as little functionality as possible</p>
+</p>
               </div>
             
               <div class="free__subsection">
-                  <img src="/assets/simple.png" alt="Simple" class="free__image" />
-                <h5>Simple</h5>
-                <small><p>No additional complexity should be present in the base protocol.</p>
-</small>
+                  <img src="/assets/simple.svg" alt="Simple" class="free__image" />
+                <h3>Simple</h3>
+                <p><p>No additional complexity should be present in the base protocol.</p>
+</p>
               </div>
             
               <div class="free__subsection">
-                  <img src="/assets/general.png" alt="General" class="free__image" />
-                <h5>General</h5>
-                <small><p>Polkadot can be optimised through making the model into which extensions fit as abstract as possible.</p>
-</small>
+                  <img src="/assets/general.svg" alt="General" class="free__image" />
+                <h3>General</h3>
+                <p><p>Polkadot can be optimised through making the model into which extensions fit as abstract as possible.</p>
+</p>
               </div>
             
               <div class="free__subsection">
-                  <img src="/assets/robust.png" alt="Robust" class="free__image" />
-                <h5>Robust</h5>
-                <small><p>Polkadot should provide a fundamentally stable base-layer.</p>
-</small>
+                  <img src="/assets/robust.svg" alt="Robust" class="free__image" />
+                <h3>Robust</h3>
+                <p><p>Polkadot should provide a fundamentally stable base-layer.</p>
+</p>
               </div>
             
           </div>
         
+    </section>
+  </div>
+
+  <div class="featureWrap bg--light-gray">
+    <section class="feature feature--wide how">
+      <h2 class="feature__title"><center>How does it work?</center></h2>
+      
+      <p class="feature__body"><center>Polkadot is a protocol that allows independent blockchains to exchange information. Polkadot is an inter-chain blockchain protocol which unlike internet messaging protocols (e.g. TCP/IP) also enforces the order and the validity of the messages between the chains. This inter-operability also allows the additional benefit of scalability by creating a general environment for multiple state machines.</center></p>
+      
+        <center><a href="https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf" class="feature__button bg--magenta" role="button">Read the Whitepaper</a></center>
+        
+          <div class="how__subsection">
+          <img src="/assets/roles.svg" alt="" class="free__image" style="max-width: 800px;"/>
+          </div>
+          
       
     </section>
   </div>
 
-  <div class="featureWrap bg--pink">
-    <section class="feature feature--wide how">
-      <h2 class="feature__title"><center>How does it work?</center></h2>
+  <div class="featureWrap bg--dark-gray">
+    <section class="feature feature--wide token">
+      <h2 class="feature__title"><center>The Token</center></h2>
       
-      <p class="feature__body">Polkadot is a protocol that allows independent blockchains to exchange information. Polkadot is an inter-chain blockchain protocol which unlike internet messaging protocols (e.g. TCP/IP) also enforces the order and the validity of the messages between the chains. This inter-operability also allows the additional benefit of scalability by creating a general environment for multiple state machines.  </h2>
+      <p class="feature__body"><center>The DOT token serves 3 distinct purposes; governance over the network, operation and bonding. </center></p>
       
-          <img src="/assets/how.png" style="max-width: 80%; margin-left: auto; margin-right: auto; padding-top:10%; padding-bottom:10%;" alt="<center>How does it work?</center>"/>
-          <a href="https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf" class="feature__button bg--dark-gray" role="button">Read the Whitepaper</a>
+          <div class="token__subsections">
+            
+              <div class="token__subsection">
+                  <img src="/assets/Governance.svg" alt="Governance" class="token__image" />
+                <h3>Governance</h3>
+                <p>Polkadot token holders have complete control over the protocol. All privileges, which on other platforms are exclusive to miners, will be given to the relay chain participants (DOT holders), including managing exceptional events such as protocol upgrades and fixes.</p>
+
+              </div>
+            
+              <div class="token__subsection">
+                  <img src="/assets/Operation.svg" alt="Operation" class="token__image" />
+                <h3>Operation</h3>
+                <p>Game theory incentivizes token holders to behave in honest ways. Good actors are rewarded by this mechanism whilst bad actors will lose their stake in the network. This ensures the network stays secure.</p>
+
+              </div>
+            
+              <div class="token__subsection">
+                  <img src="/assets/Bonding.svg" alt="Bonding" class="token__image" />
+                <h3>Bonding</h3>
+                <p>New parachains are added by bonding tokens. Outdated or non-useful parachains are removed by removing bonded tokens. (proof of stake)</p>
+
+              </div>
+            
+            </div>
         
-      
     </section>
   </div>
 
   <div class="featureWrap bg--white">
-    <section class="feature feature--wide token">
-      <h2 class="feature__title">The Token</h2>
+    <section class="feature feature--wide where">
+      <h2 class="feature__title">Where are we?</h2>
       
       
       
-            
-              <div class="develop__subsection">
-                <div class="develop__subsection__content">
-                  <p>The Polkadot network will use DOT tokens as a measure of stake within the network, requiring them to take part in the governance and direction of the overall system as well as payment for certain kinds of operations within the system such as the bonding of commercial chains.</p>
+              
+                <div class="develop__subsection">
+                  <div class="develop__subsection__content">
+                    <p>In the sale, a fixed amount of tokens is sold. 5 million out of the total 10 million DOTs allocated at Genesis time will be sold. The tokens will be split between each participant in the sale, relative to how much they spend. For example, if the sale ends with just three participants, Alice (who spent 20 ETH), Bob (30 ETH) and Charlie (50 ETH), then they would receive, respectively, 1 million DOTs, 1.5 million DOTs and 2.5 million DOTs).</p>
 
-<p>Tokens purchased during this sale will not exist until the genesis block launch, currently estimated to happen in Q3 2019.</p>
-
-                  
+                    <a href="https://polkadot.io" class="feature__button bg--magenta" role="button">Go to Polkadot.io</a>
+                  </div>
+                  <figure class="develop__subsection__figure">
+                    <img src="/assets/magnify.svg" style="max-width: 75%; margin-left:auto; margin-right:auto;"/>
+                  </figure>
                 </div>
-                <figure class="develop__subsection__figure">
-                  <img src="/assets/tokens.png" />
-                </figure>
-              </div>
-            
-            
-      
+              
+          
     </section>
   </div>
 
-  <div class="featureWrap bg--lightest-gray">
-    <section class="feature feature--wide develop">
-      <h2 class="feature__title">The Auction</h2>
-      
-      
-      
-          
-            <div class="develop__subsection">
-              <div class="develop__subsection__content">
-                <p>The sale will be a “spend-all second-price Dutch auction” where a fixed amount representing 50% of the total genesis block allocation of tokens will be sold. We will certainly accept Ether in the sale; other crypto-currencies may also be accepted depending on technical feasibility and timeline.</p>
-
-<p>We are targeting mid-August for the start of the sale; we intend to issue a 14-day countdown once we have the specific date nailed down.</p>
-
-<p>As a form of Dutch auction, the token price (and therefore “cap”) starts high and decreases over time until all tokens are sold. The timetable of how fast the price reduces is predefined, starting fast and getting slower over time. The final details, including identity requirements and auction timetable will be published along with the specific date that the sale will begin in the near future.</p>
-
-<p>Pursuant to certain identity requirements forced on us by international regulations, we are happy to allow citizens and organisations of almost all jurisdictions globally the opportunity to participate in this event (we are sad to note that due to legal restrictions, we are unable to accept the contributions of citizens of Japan). We will endeavour to make the certification as  cheap, swift and convenient as possible.</p>
-
-                
-              </div>
-              <figure class="develop__subsection__figure">
-                <img src="/assets/dots.png" />
-              </figure>
-            </div>
-          
-          
-      
-    </section>
-  </div>
-
-  <div class="featureWrap bg--logo">
-    <section class="feature feature--wide roadmap">
-      <h2 class="feature__title">Roadmap</h2>
+  <div class="featureWrap bg--dark-gray">
+    <section class="feature feature--wide friends">
+      <h2 class="feature__title">Friends of Polkadot</h2>
       
       
       
               
                 <div class="roadmap__subsection">
-                    <img src="/assets/roadmap-full.png" alt="" class="roadmap__image" />
+                    <img src="/assets/friends.svg" alt="" class="roadmap__image" />
                 </div>
               
-          
-      
+              
     </section>
   </div>
 
+
+      <div class="roadmap">
+  <h2 class="feature__title" style="margin-left: 10%; padding-top: 20%;">Roadmap</h2>
+  <div id="timeline">
+    <div class="timeline-item">
+      <div class="timeline-icon-top">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 126.51 126.51"><defs><style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}.cls-4{clip-path:url(#clip-path-2);}.cls-5{fill:#4d4d4d;}.cls-6{fill:#e04894;}.cls-7{fill:#d64ca8;}</style><clipPath id="clip-path"><circle class="cls-1" cx="63.52" cy="63.87" r="62.64"/></clipPath><clipPath id="clip-path-2"><rect class="cls-1" width="126.51" height="126.51" transform="translate(0 126.51) rotate(-90)"/></clipPath></defs><title>logo</title><g id="Layer_2" data-name="Layer 2"><g id="_003_what_is_it_" data-name="003_what is it?"><g class="cls-2"><rect class="cls-3" width="126.51" height="126.51" transform="translate(0 126.51) rotate(-90)"/><g class="cls-4"><circle class="cls-5" cx="17.7" cy="90.29" r="7.66"/><circle class="cls-5" cx="17.7" cy="64.51" r="7.66"/><circle class="cls-5" cx="17.7" cy="38.74" r="7.66"/><circle class="cls-5" cx="41.21" cy="102.91" r="7.66"/><circle class="cls-5" cx="41.21" cy="77.13" r="7.66"/><circle class="cls-5" cx="41.21" cy="51.36" r="7.66"/><circle class="cls-5" cx="41.21" cy="25.58" r="7.66"/><circle class="cls-5" cx="63.86" cy="116.07" r="7.66"/><circle class="cls-5" cx="63.86" cy="90.29" r="7.66"/><circle class="cls-6" cx="63.86" cy="64.51" r="7.66"/><circle class="cls-5" cx="63.86" cy="38.74" r="7.66"/><circle class="cls-5" cx="63.86" cy="12.96" r="7.66"/><circle class="cls-5" cx="87.38" cy="102.91" r="7.66"/><circle class="cls-5" cx="87.38" cy="77.13" r="7.66"/><circle class="cls-5" cx="87.38" cy="51.36" r="7.66"/><circle class="cls-5" cx="87.38" cy="25.58" r="7.66"/><circle class="cls-5" cx="110.03" cy="90.29" r="7.66"/><circle class="cls-5" cx="110.03" cy="64.51" r="7.66"/><circle class="cls-5" cx="110.03" cy="38.74" r="7.66"/></g><circle class="cls-1" cx="63.52" cy="63.87" r="62.64"/><g class="cls-2"><circle class="cls-1" cx="45.72" cy="29.87" r="13.64"/><circle class="cls-1" cx="82.35" cy="29.87" r="13.64"/><circle class="cls-1" cx="27.79" cy="64.81" r="13.64"/><circle class="cls-1" cx="101.05" cy="64.81" r="13.64"/><circle class="cls-1" cx="45.72" cy="97" r="13.64"/><circle class="cls-1" cx="82.35" cy="97" r="13.64"/></g><rect class="cls-3" width="126.51" height="126.51" transform="translate(0 126.51) rotate(-90)"/><g class="cls-4"><circle class="cls-5" cx="19.81" cy="89.11" r="7.31"/><circle class="cls-5" cx="19.81" cy="64.51" r="7.31"/><circle class="cls-5" cx="19.81" cy="39.92" r="7.31"/><circle class="cls-5" cx="42.25" cy="101.15" r="7.31"/><circle class="cls-5" cx="42.25" cy="76.56" r="7.31"/><circle class="cls-5" cx="42.25" cy="51.96" r="7.31"/><circle class="cls-5" cx="42.25" cy="27.36" r="7.31"/><circle class="cls-5" cx="63.86" cy="113.71" r="7.31"/><circle class="cls-5" cx="63.86" cy="89.11" r="7.31"/><circle class="cls-7" cx="63.86" cy="64.51" r="7.31"/><circle class="cls-5" cx="63.86" cy="39.92" r="7.31"/><circle class="cls-5" cx="63.86" cy="15.32" r="7.31"/><circle class="cls-5" cx="86.3" cy="101.15" r="7.31"/><circle class="cls-5" cx="86.3" cy="76.56" r="7.31"/><circle class="cls-5" cx="86.3" cy="51.96" r="7.31"/><circle class="cls-5" cx="86.3" cy="27.36" r="7.31"/><circle class="cls-5" cx="107.91" cy="89.11" r="7.31"/><circle class="cls-5" cx="107.91" cy="64.51" r="7.31"/><circle class="cls-5" cx="107.91" cy="39.92" r="7.31"/></g><g class="cls-2"><circle class="cls-1" cx="45.72" cy="29.87" r="13.64"/><circle class="cls-1" cx="82.35" cy="29.87" r="13.64"/><circle class="cls-1" cx="27.79" cy="64.81" r="13.64"/><circle class="cls-1" cx="101.05" cy="64.81" r="13.64"/><circle class="cls-1" cx="45.72" cy="97" r="13.64"/><circle class="cls-1" cx="82.35" cy="97" r="13.64"/></g></g></g></g></svg>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon-logo">
+      </div>
+      <div class="timeline-content right">
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon">
+      </div>
+      <div class="timeline-content right">
+        <h3>Networking subsystem</h3>
+        <p>
+          This is the means by which a peer network is formed and maintained. First an altered devp2p, then libp2p.
+        </p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon">
+      </div>
+      <div class="timeline-content right">
+        <h3>Finalisation mechanism</h3>
+        <p>
+          Optimistic BFT proof-of-authority consensus mechanism. The mechanism allows the proof of misbehaviour for the dismissal of malicious validators.
+        </p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon">
+      </div>
+      <div class="timeline-content right">
+        <h3>Parallelised decentralised candidate selection mechanism</h3>
+        <p>
+          This is allowing multiple independent items to be agreed upon under a single series based upon subjective reception of the partial set of validator statements. Used as an input to the finalization mechanism.
+        </p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon">
+      </div>
+      <div class="timeline-content right">
+        <h3>Finalisation mechanism</h3>
+        <p>Extending the consensus mechanism into proof-of-stake territory; this module includes staking tokens, managing entry and exit from the validator pool, a market mechanism for determining.
+        </p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 126.51 126.51"><defs><style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}.cls-4{clip-path:url(#clip-path-2);}.cls-5{fill:#4d4d4d;}.cls-6{fill:#e04894;}.cls-7{fill:#d64ca8;}</style><clipPath id="clip-path"><circle class="cls-1" cx="63.52" cy="63.87" r="62.64"/></clipPath><clipPath id="clip-path-2"><rect class="cls-1" width="126.51" height="126.51" transform="translate(0 126.51) rotate(-90)"/></clipPath></defs><title>logo</title><g id="Layer_2" data-name="Layer 2"><g id="_003_what_is_it_" data-name="003_what is it?"><g class="cls-2"><rect class="cls-3" width="126.51" height="126.51" transform="translate(0 126.51) rotate(-90)"/><g class="cls-4"><circle class="cls-5" cx="17.7" cy="90.29" r="7.66"/><circle class="cls-5" cx="17.7" cy="64.51" r="7.66"/><circle class="cls-5" cx="17.7" cy="38.74" r="7.66"/><circle class="cls-5" cx="41.21" cy="102.91" r="7.66"/><circle class="cls-5" cx="41.21" cy="77.13" r="7.66"/><circle class="cls-5" cx="41.21" cy="51.36" r="7.66"/><circle class="cls-5" cx="41.21" cy="25.58" r="7.66"/><circle class="cls-5" cx="63.86" cy="116.07" r="7.66"/><circle class="cls-5" cx="63.86" cy="90.29" r="7.66"/><circle class="cls-6" cx="63.86" cy="64.51" r="7.66"/><circle class="cls-5" cx="63.86" cy="38.74" r="7.66"/><circle class="cls-5" cx="63.86" cy="12.96" r="7.66"/><circle class="cls-5" cx="87.38" cy="102.91" r="7.66"/><circle class="cls-5" cx="87.38" cy="77.13" r="7.66"/><circle class="cls-5" cx="87.38" cy="51.36" r="7.66"/><circle class="cls-5" cx="87.38" cy="25.58" r="7.66"/><circle class="cls-5" cx="110.03" cy="90.29" r="7.66"/><circle class="cls-5" cx="110.03" cy="64.51" r="7.66"/><circle class="cls-5" cx="110.03" cy="38.74" r="7.66"/></g><circle class="cls-1" cx="63.52" cy="63.87" r="62.64"/><g class="cls-2"><circle class="cls-1" cx="45.72" cy="29.87" r="13.64"/><circle class="cls-1" cx="82.35" cy="29.87" r="13.64"/><circle class="cls-1" cx="27.79" cy="64.81" r="13.64"/><circle class="cls-1" cx="101.05" cy="64.81" r="13.64"/><circle class="cls-1" cx="45.72" cy="97" r="13.64"/><circle class="cls-1" cx="82.35" cy="97" r="13.64"/></g><rect class="cls-3" width="126.51" height="126.51" transform="translate(0 126.51) rotate(-90)"/><g class="cls-4"><circle class="cls-5" cx="19.81" cy="89.11" r="7.31"/><circle class="cls-5" cx="19.81" cy="64.51" r="7.31"/><circle class="cls-5" cx="19.81" cy="39.92" r="7.31"/><circle class="cls-5" cx="42.25" cy="101.15" r="7.31"/><circle class="cls-5" cx="42.25" cy="76.56" r="7.31"/><circle class="cls-5" cx="42.25" cy="51.96" r="7.31"/><circle class="cls-5" cx="42.25" cy="27.36" r="7.31"/><circle class="cls-5" cx="63.86" cy="113.71" r="7.31"/><circle class="cls-5" cx="63.86" cy="89.11" r="7.31"/><circle class="cls-7" cx="63.86" cy="64.51" r="7.31"/><circle class="cls-5" cx="63.86" cy="39.92" r="7.31"/><circle class="cls-5" cx="63.86" cy="15.32" r="7.31"/><circle class="cls-5" cx="86.3" cy="101.15" r="7.31"/><circle class="cls-5" cx="86.3" cy="76.56" r="7.31"/><circle class="cls-5" cx="86.3" cy="51.96" r="7.31"/><circle class="cls-5" cx="86.3" cy="27.36" r="7.31"/><circle class="cls-5" cx="107.91" cy="89.11" r="7.31"/><circle class="cls-5" cx="107.91" cy="64.51" r="7.31"/><circle class="cls-5" cx="107.91" cy="39.92" r="7.31"/></g><g class="cls-2"><circle class="cls-1" cx="45.72" cy="29.87" r="13.64"/><circle class="cls-1" cx="82.35" cy="29.87" r="13.64"/><circle class="cls-1" cx="27.79" cy="64.81" r="13.64"/><circle class="cls-1" cx="101.05" cy="64.81" r="13.64"/><circle class="cls-1" cx="45.72" cy="97" r="13.64"/><circle class="cls-1" cx="82.35" cy="97" r="13.64"/></g></g></g></g></svg>
+      </div>
+      <div class="timeline-content right">
+      </div>
+    </div>
+
+  </div>
+  </div>
 
     </div>
     <div class="footerWrap">

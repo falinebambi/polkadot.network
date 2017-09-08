@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 736.5 355.8" style="enable-background:new 0 0 736.5 355.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#7F7878;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st1{fill:none;}
+	.st2{fill:none;stroke:#B3B3B3;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#B3B3B3;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:0,5.92;}
+	.st4{fill:none;stroke:#4D4D4D;stroke-width:4;stroke-miterlimit:10;}
+	.st5{fill:#4D4D4D;}
+	.st6{fill:none;stroke:#4D4D4D;stroke-width:2;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:#D64CA8;stroke-width:3;stroke-miterlimit:10;}
+	.st8{fill:#D64CA8;}
+	.st9{fill:none;stroke:#D64CA8;stroke-width:2;stroke-miterlimit:10;}
+	.st10{fill:#FFFFFF;}
+	.st11{font-family:'DINCondensed-Bold';}
+	.st12{font-size:26px;}
+	.st13{fill:#FFFFFF;stroke:#999999;stroke-width:2;stroke-miterlimit:10;}
+	.st14{font-family:'DINCompPro';}
+	.st15{font-size:18px;}
+</style>
+<title>auction</title>
+<g id="Layer_2">
+	<g id="_003_what_is_it_">
+		<polyline class="st0" points="735.5,309.4 5.3,309.4 5.3,1 		"/>
+		<line class="st1" x1="207.6" y1="101.4" x2="208.9" y2="190.2"/>
+		<line class="st2" x1="207.6" y1="101.4" x2="207.6" y2="101.4"/>
+		<line class="st3" x1="207.7" y1="107.3" x2="208.9" y2="187.2"/>
+		<line class="st2" x1="208.9" y1="190.2" x2="208.9" y2="190.2"/>
+		<line class="st4" x1="4.1" y1="18.2" x2="207.6" y2="101.4"/>
+		<ellipse class="st5" cx="207.3" cy="101.2" rx="11.6" ry="11.3"/>
+		<ellipse class="st6" cx="207.3" cy="101.2" rx="17.3" ry="16.9"/>
+		<ellipse class="st5" cx="5.3" cy="18.7" rx="5.3" ry="5.2"/>
+		<path class="st7" d="M6.6,308.1l11.9-16.3l6.9-24.7l4.7-11.6l5.1-8.4l8,3.6l5.4-6.2l8.7-13.8c0,0,9.1,8.1,10.1,6.9
+			s6.5-7.8,7.6-6.9s8.3-10.2,8.3-10.2l10.9,1.8l5.4-1.8l11.9-6h5.4l2.9-10l8.3,7.3l20.6-9.1l11.2,4.4l22.8-10.5l26.1-6.4"/>
+		<ellipse class="st8" cx="6.6" cy="308.1" rx="5.3" ry="5.2"/>
+		<ellipse class="st8" cx="208.5" cy="190.2" rx="11.6" ry="11.3"/>
+		<ellipse class="st9" cx="208.5" cy="190.2" rx="17.3" ry="16.9"/>
+		<text transform="matrix(1 0 0 1 340.45 349.27)" class="st10 st11 st12">T</text>
+		<text transform="matrix(1 0 0 1 353.06 349.27)" class="st10 st11 st12">ime</text>
+		<path class="st13" d="M348.5,64.8H214.8l-7.8,5.7l-7.8-5.7h-3.6c-2.7,0.1-5-2-5.2-4.7c0,0,0,0,0,0v-25c0.1-2.7,2.4-4.8,5.1-4.7
+			h152.9c2.7-0.1,5,2,5.1,4.7v25C353.5,62.8,351.2,64.9,348.5,64.8z"/>
+		<path class="st13" d="M415,172.8H253.6c-3.4,0-6.1,2.1-6.1,4.8v6.3l-6.6,6l6.6,6v7c0,2.6,2.7,4.8,6.1,4.8H415
+			c3.4,0,6.1-2.1,6.1-4.8v-25.3C421,174.9,418.3,172.8,415,172.8z"/>
+		<text transform="matrix(1 0 0 1 207.711 54.0985)" class="st14 st15">TARGET RAISE *</text>
+		<text transform="matrix(1 0 0 1 261.8275 196.8208)" class="st14 st15">RAISED SO FAR **</text>
+	</g>
+</g>
+</svg>
