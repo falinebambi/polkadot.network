@@ -72,5 +72,5 @@ date_format: "%b %d, %Y"
 google_analytics: UA-1666437-33
 twitter:
   username: Polkadot
-logo: "/assets/avatar.png"
+logo: "/assets/avatar.svg"
 future: true
