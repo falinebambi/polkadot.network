@@ -51,7 +51,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+{
   font-weight: $font-weight--normal;
   font-family: $font-family--sans-serif;
 }
@@ -72,6 +72,8 @@ h2 {
   font-size: 2.8em;
   line-height: $line-height--tight;
   letter-spacing: $letter-spacing--tight;
+  padding-top: 2%;
+  padding-bottom: 7%;
   @include max-width($max-width--sm) {
     font-size: 2em;
   }
@@ -87,9 +89,22 @@ h3 {
   margin-bottom: $v*1;
 }
 h4 {
-  font-size: 1.083333em;
-  margin-bottom: $v*0.25;
+  font-size: 1.7em;
+  margin-top: $v*1.5;
+  margin-bottom: $v*1.5;
 }
+
+h6 {
+  font-size: 1.2em;
+  font-family: $font-family--monospace;
+  text-align: center;
+  max-width: 1000px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+}
+
 p {
   padding-bottom: 5%;
   @extend %mk3;
@@ -149,6 +164,8 @@ small {
 }
 img {
   max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   @include responsive-image;
 }
 
@@ -173,6 +190,17 @@ mark {
 .pb {
   padding-bottom: 10%;
 }
+
+.pt {
+  padding-top: 10%;
+}
+
+.mb {
+  margin-bottom: 10%;
+}
+
+
+
 
 // components
 // ----------
@@ -377,8 +405,6 @@ h6 {
 }
 .feature__title {
   text-align: left;
-  padding-top: 5%;
-  padding-bottom: 7%;
 }
 
 // intro
@@ -735,6 +761,32 @@ h6 {
   h5 {
   text-align: center;
   }
+}
+
+// diagram
+// -------------------
+
+.features-table {
+    display: table;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.features-row:nth-child(1n) {
+    display: table-row;
+    border-bottom: 2px solid white;
+}
+.features-cell {
+    display: table-cell;
+    width: 50%;
+    text-align: center;
+    padding: 44px 100px 82px 100px;
+}
+
+.features-cell:nth-child(2n) {
+    border-left: 2px solid white
+}
+.features-row:nth-child(2n) .features-cell {
+    padding: 77px 100px 44px 100px;
 }
 
 // launch
@@ -1667,31 +1719,6 @@ body {
       width: 95px;
       height: 95px;
     }
-  }
-
-  // how diagram
-  // -------------------
-
-  .features-table {
-      display: table;
-      table-layout: fixed;
-      width: 100%;
-      border-collapse: collapse;
-  }
-  .features-row {
-      display: table-row;
-      border-bottom: 2px solid $color--magenta;
-  }
-  .features-cell {
-      display: table-cell;
-      width: 50%;
-      padding: 44px 100px 82px 100px;
-  }
-  .features-cell:nth-child(2n) {
-      border-left: 2px solid $color--magenta;
-  }
-  .features-row:nth-child(2n) .features-cell {
-      padding: 77px 100px 44px 100px;
   }
 
   // dots roadmap

@@ -145,10 +145,7 @@ layout: default
             {% endfor %}
             </div>
         {% when 'how' %}
-        <center><a href="https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf" class="feature__button bg--magenta" role="button">Read the Whitepaper</a></center>
-        {% for subsection in how.subsections %}
           {% include roles.html %}
-          {% endfor %}
       {% endcase %}
     </section>
   </div>

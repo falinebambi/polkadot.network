@@ -89,16 +89,15 @@ features:
     title: Robust
     body: Polkadot should provide a fundamentally stable base-layer.
 
-- title: <center>How does it work?</center>
+- title:
   handle: how
   background: light-gray
   width: wide
   body: |-
-    <center>Polkadot is a protocol that allows independent blockchains to exchange information. Polkadot is an inter-chain blockchain protocol which unlike internet messaging protocols (e.g. TCP/IP) also enforces the order and the validity of the messages between the chains. This inter-operability also allows the additional benefit of scalability by creating a general environment for multiple state machines.</center>
   subsections:
 
 - title: <center>The Token</center>
-  body: <center>The DOT token serves 3 distinct purposes; governance over the network, operation and bonding. </center>
+  subtitle: <h6>The DOT token serves 3 distinct purposes; governance over the network, operation and bonding.</h6>
   handle: token
   background: dark-gray
   width: wide
