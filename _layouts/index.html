@@ -10,6 +10,9 @@ layout: default
       {% if feature.body %}<p class="feature__body">{{ feature.body }}</p>{% endif %}
       {% case feature.handle %}
         {% when 'manage' %}
+        <div class="row">
+          {% include what.html %}
+        </div>
           <div class="manage__content">
             <div class="manage__figures">
               {% for subsection in feature.subsections %}
@@ -35,8 +38,8 @@ layout: default
               <div class="vision__subsection__content">
                 {{ subsection.body | markdownify }}
               </div>
-              <figure class="develop__subsection__figure">
-                <iframe width="660" height="420" src="https://www.youtube.com/embed/lIghiCmHz0U?rel=0" frameborder="0" allowfullscreen></iframe>
+              <figure class="develop__subsection__figure responsive-image">
+                  <iframe width="660" height="420" src="https://www.youtube.com/embed/lIghiCmHz0U?rel=0" allowfullscreen></iframe>
               </figure>
             </div>
           {% endfor %}
@@ -57,10 +60,10 @@ layout: default
                 <div class="develop__subsection">
                   <div class="develop__subsection__content">
                     {{ subsection.body | markdownify }}
-                    <a href="https://polkadot.io" class="feature__button bg--magenta" role="button">Go to Polkadot.io</a>
+                    <a href="https://polkadot.io" class="feature__button bg--magenta mt" role="button">Go to Polkadot.io</a>
                   </div>
                   <figure class="develop__subsection__figure">
-                    <img src="{{ subsection.image }}" style="max-width: 75%; margin-left:auto; margin-right:auto;"/>
+                    <img src="{{ subsection.image }}" style="max-width: 65%; margin-left:auto; margin-right:auto;"/>
                   </figure>
                 </div>
               {% endfor %}
@@ -99,7 +102,8 @@ layout: default
               {% endfor %}
               {% when 'cta' %}
               <div class="header-buttons">
-                <div class="col-md-12 row centered">
+                <div class="col-md-12 row centered mt1">
+                  <p>Please note we require participants in the auction to verify their identity in compliance with OFAC regulation, read more here. <br><br>You can pre-verify your wallet using the button below</p>
                   <div class="col-md-6">
                 <a href="https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf" class="feature__button bg--magenta" role="button">Read the Whitepaper</a>
                 </div>
@@ -139,8 +143,8 @@ layout: default
             {% for subsection in feature.subsections %}
               <div class="token__subsection">
                   <img src="{{ subsection.image }}" alt="{{ subsection.title }}" class="token__image" />
-                <h3>{{ subsection.title }}</h3>
-                {{ subsection.body | markdownify }}
+                <h4>{{ subsection.title }}</h4>
+                <small>{{ subsection.body | markdownify }}</small>
               </div>
             {% endfor %}
             </div>

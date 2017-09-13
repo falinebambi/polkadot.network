@@ -72,10 +72,10 @@ h2 {
   font-size: 2.8em;
   line-height: $line-height--tight;
   letter-spacing: $letter-spacing--tight;
-  padding-top: 2%;
-  padding-bottom: 7%;
+  padding-top: 10%;
+  padding-bottom: 5%;
   @include max-width($max-width--sm) {
-    font-size: 2em;
+    text-align: left;
   }
   margin-bottom: $v*0.5;
 }
@@ -108,6 +108,9 @@ h6 {
 p {
   padding-bottom: 5%;
   @extend %mk3;
+  @include max-width($max-width--sm) {
+    padding-top: 5%;
+  }
 }
 hr {
   width: 5em;
@@ -164,8 +167,6 @@ small {
 }
 img {
   max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
   @include responsive-image;
 }
 
@@ -195,8 +196,15 @@ mark {
   padding-top: 10%;
 }
 
+.mt {
+  margin-top: 10%;
+}
+
 .mb {
   margin-bottom: 10%;
+}
+.mt1 {
+  margin-top: 5%;
 }
 
 
@@ -387,9 +395,14 @@ h6 {
 // ----
 
 .featureWrap {
-  padding-top: 6%;
-  padding-bottom: 10%;
+  padding-bottom: 11%;
+  @include max-width($max-width--sm) {
+    padding: 0;
+  }
 }
+
+
+
 .featureWrap--unpadBottom {
   padding-bottom: 0;
 }
@@ -530,7 +543,6 @@ h6 {
   padding-bottom: $gutter*0.75;
   border-radius: $border-radius--base;
   .js & {
-    padding-left: $gutter*0.75;
     padding-right: $gutter*0.75;
     cursor: pointer;
     &:hover,
@@ -548,17 +560,14 @@ h6 {
   &:nth-of-type(odd) {
     @include justify-content(flex-end);
   }
-  text-align: left;
+  @include max-width($max-width--sm) {
+    margin-top: 0;
+  }
   h3 {
     font-size: 2em;
     @include max-width($max-width--sm) {
       font-size: 1.75em;
     }
-  }
-}
-.develop__subsection + .develop__subsection {
-  @include max-width($max-width--sm) {
-    margin-top: $v*3;
   }
 }
 .develop__subsection__content {
@@ -606,12 +615,11 @@ h6 {
   margin-right: 6%;
 }
 
-.vision__subsection__figure {
-
-}
-
 .technicals-header {
   margin-left: 52%;
+  @include max-width($max-width--sm) {
+    margin-left: 0;
+  }
 }
 
 .technicals__subsection__figure {
@@ -774,19 +782,34 @@ h6 {
 .features-row:nth-child(1n) {
     display: table-row;
     border-bottom: 2px solid white;
+
 }
 .features-cell {
     display: table-cell;
     width: 50%;
     text-align: center;
     padding: 44px 100px 82px 100px;
+
+    @include max-width($max-width--sm)
+      { display: block;
+        padding: 10%;
+        width: 100%;
+      }
 }
 
 .features-cell:nth-child(2n) {
-    border-left: 2px solid white
+    border-left: 2px solid white;
+    @include max-width($max-width--sm) {
+      border-left: 0;
+    }
 }
 .features-row:nth-child(2n) .features-cell {
     padding: 77px 100px 44px 100px;
+    @include max-width($max-width--sm){
+        display: block;
+        padding: 10%;
+        width: 100%;
+      }
 }
 
 // launch
@@ -1371,6 +1394,18 @@ h6 {
   color: $color--white;
 }
 
+.bg--dark-gray-cta {
+  background: $color--dark-gray;
+  color: $color--white;
+  height: 320px;
+}
+
+.bg--dark-gray-friends {
+  background: $color--dark-gray;
+  color: $color--white;
+  height: 550px;
+}
+
 .bg--pinkdots {
   color: #4D4D4D;
   background-image: url(/assets/bk-dots-4.svg);
@@ -1605,11 +1640,10 @@ body {
   }
   @include max-width($max-width--sm) {
     padding: 5%;
-    top: 25%;
+    left: 5%;
     margin-top: $v*0.75;
     .header--extended & {
       margin-top: $v*0.75;
-      max-width: 28rem;
     }
   }
 }
@@ -1629,6 +1663,15 @@ body {
     padding: 5%;
   }
 }
+
+#mc_embed_signup .button {
+  background-color: #4d4d4d;
+}
+
+#mc_embed_signup form {
+    margin-top: 10%;
+    }
+
 
 .header__buttonWrap__left {
   position: absolute;
@@ -1659,11 +1702,14 @@ body {
   color: $color--dark-gray;
   background-image: url(/assets/bk-dots.svg);
   width: 100%;
-  height: 680px;
+  height: 580px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   z-index: 1;
+  @include max-width($max-width--sm) {
+    height: 450px;
+  }
 }
 
 .header-buttons {
@@ -1678,7 +1724,7 @@ body {
   font-size: 60px;
   padding-top: 1.2rem;
   background-color: white;
-  border: 4px solid $color--magenta;
+  border: 1px solid $color--magenta;
   color: $color--dark-gray;
   width:150px;
   border-radius: 50%;
@@ -1765,8 +1811,9 @@ body {
     padding-top: 1%;
   }
 
-  .friends > .featureWrap {
-    padding-bottom: 20%;
+  .friends-icons > .featureWrap {
+    height: 800px;
+    background-color: $color--dark-gray;
 }
 
  svg:hover #icon {
@@ -1804,8 +1851,8 @@ body {
   			width: 15px;
   			height: 15px;
   			position: absolute;
-  			top: 0;
-  			left: 51.25%;
+  			top: 16px;
+  			left: 51.4%;
   			overflow: hidden;
   			margin-left: -23px;
   			@include prefix(border-radius, 50%);
@@ -1815,7 +1862,7 @@ body {
         height: 75px;
         width: 75px;
         margin-top: -55px;
-        left: 39rem;
+        left: 49.5%;
         position: absolute;
         top: 0;
         overflow: hidden;
@@ -1826,7 +1873,7 @@ body {
       .timeline-icon-bottom {
         height: 75px;
         width: 75px;
-        left: 39rem;
+        left: 49.5%;
         position: absolute;
         top: 0;
         overflow: hidden;
@@ -1863,6 +1910,7 @@ body {
       width: 90%;
   		&:before {
   			left: 0;
+        width: 0;
   		}
 
   		.timeline-item {
@@ -1873,6 +1921,7 @@ body {
 
   			.timeline-icon {
   				left: 0;
+          top: 3%;
   			}
   		}
   	}

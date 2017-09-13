@@ -9,7 +9,7 @@ features:
 
 - title:
   handle: cta
-  background: dark-gray
+  background: dark-gray-cta
   width: wide
 
 - title: The Auction
@@ -42,8 +42,6 @@ features:
     image: "/assets/dots.svg"
 
 - title: What is it?
-  subtitle: Polkadot is a blockchain technology. <br>a heterogeneous multi-chain.
-  body: It consists of many parachains with potentially differing characteristics, such as ability to provide anonymity or formal verification. Transactions can be spread out across the chains, allowing many more to be processed in the same period of time. Polkadot ensures that each of these blockchains remains secure and that any dealings between the are faithfully executed. Specialised parachains called bridges can be created to link independent chains.
   handle: manage
   width: wide
   background: light-gray
@@ -89,15 +87,14 @@ features:
     title: Robust
     body: Polkadot should provide a fundamentally stable base-layer.
 
-- title:
+- title: <center>How does it work?</center>
   handle: how
   background: light-gray
   width: wide
-  body: |-
   subsections:
 
 - title: <center>The Token</center>
-  subtitle: <h6>The DOT token serves 3 distinct purposes; governance over the network, operation and bonding.</h6>
+  subtitle: <h6>The DOT token serves <b>3 distinct purposes</b>; governance over the network, <br>operation and bonding.</h6>
   handle: token
   background: dark-gray
   width: wide
@@ -123,7 +120,7 @@ features:
 
 - title: Friends of Polkadot
   handle: friends
-  background: dark-gray
+  background: dark-gray-friends
   width: wide
   subsections:
   - body: |-

@@ -1,9 +1,9 @@
 {
-  "name": "siteleaf.com",
+  "name": "polkadot.network",
   "version": "1.1.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/siteleaf/siteleaf.com.git"
+    "url": "git+http://www.polkadot.network"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
