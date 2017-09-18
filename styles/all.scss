@@ -308,6 +308,14 @@ h6 {
     opacity: $opacity--hover;
   }
 }
+.footer__link {
+  color: white;
+
+  &:hover {
+    color: white;
+    text-decoration: underline;
+  }
+}
 .header__link--button {
   background: $color--leaf;
   color: $color--white;
@@ -1623,9 +1631,7 @@ body {
   @include margin-center;
 }
 .header__title {
-  position: absolute;
   color: #4D4D4D;
-  left: 28%;
   font-size: 2.5em;
   margin-top: $v*2.75;
   margin-bottom: $v*0.75;
@@ -1702,14 +1708,10 @@ body {
   color: $color--dark-gray;
   background-image: url(/assets/bk-dots.svg);
   width: 100%;
-  height: 580px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   z-index: 1;
-  @include max-width($max-width--sm) {
-    height: 450px;
-  }
 }
 
 .header-buttons {
@@ -1717,55 +1719,48 @@ body {
   margin-right: auto;
 }
 
-.counter {
-  display: table-cell;
-  margin:1.5%;
-  font-family: 'Abel', sans-serif;
-  font-size: 60px;
-  padding-top: 1.2rem;
-  background-color: white;
-  border: 1px solid $color--magenta;
-  color: $color--dark-gray;
-  width:150px;
-  border-radius: 50%;
-  height:150px;
-}
-
 #timer {
-    position: absolute;
-    top:35%;
-    left:30%;
-    margin-left: auto;
-    margin-right: auto;
-}
+  margin: 1rem auto;
+  display: inline-block;
 
-#timer span {
-      font-family: $font-family--monospace;
-      letter-spacing: 0px;
-      color: $color--magenta;
-      margin-top: -10rem;
-      font-size: 20px;
-      display: block;
-    }
+  .counter {
+    display: inline-block;
+    margin: 0 1rem;
+  }
+
+  .counter__value {
+    display: block;
+    font-family: 'Abel', sans-serif;
+    font-size: 60px;
+    background-color: white;
+    border: 1px solid $color--magenta;
+    color: $color--dark-gray;
+    border-radius: 50%;
+    height:150px;
+    width:150px;
+    line-height: 150px;
+  }
+
+  .counter__label {
+    font-family: $font-family--monospace;
+    letter-spacing: 0px;
+    color: $color--magenta;
+    font-size: 20px;
+    display: block;
+    margin: 1rem 0;
+  }
+}
 
 @media (max-width : 667px) {
-  #timer {
-      left: 1.5rem;
-      top: 18rem;
-  }
-  #timer div {
-      padding: 16px;
-      font-size: 26px !important;
-  }
-   #timer span {
-        margin-top: 2px;
-        font-size: 12px !important;
-      }
-    .counter {
-      width: 95px;
+   #timer {
+    .counter__value {
+      font-size: 35px;
       height: 95px;
+      line-height: 95px;
+      width: 95px;
     }
   }
+}
 
   // dots roadmap
   // -------------------

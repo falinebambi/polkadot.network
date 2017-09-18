@@ -3,10 +3,23 @@
             <div class="sqs-block-content">
               <h1 class="header__title">Watch this space...</h1>
               <div id="timer">
-                <div id="days" class="counter"></div>
-                <div id="hours" class="counter"></div>
-                <div id="minutes" class="counter"></div>
-                <div id="seconds" class="counter"></div>
+                <div class="counter">
+                  <span class="counter__label">days</span>
+                  <span class="counter__value" id="days"></span>
+                </div>
+                <div class="counter">
+                  <span class="counter__label">hours</span>
+                  <span class="counter__value" id="hours"></span>
+                </div>
+                <div class="counter">
+                  <span class="counter__label">minutes</span>
+                  <span class="counter__value" id="minutes"></span>
+                </div>
+                <div class="counter">
+                  <span class="counter__label">seconds</span>
+                  <span class="counter__value" id="seconds"></span>
+                </div>
+
                 <div id="mc_embed_signup">
                 <form action="//kirstynandkirstyn.us13.list-manage.com/subscribe/post?u=4f5461fe75556d88be395190b&amp;id=2d0c830769" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <div id="mc_embed_signup_scroll">
@@ -22,7 +35,6 @@
 </div>
 <script>
   function makeTimer() {
-
     var endTime = new Date("September 30, 2017 12:00:00 EST");
     var endTime = (Date.parse(endTime)) / 1000;
 
@@ -46,14 +58,18 @@
       seconds = "0" + seconds;
     }
 
-    $("#days").html(days + "<span>days</span>");
-    $("#hours").html(hours + "<span>hours</span>");
-    $("#minutes").html(minutes + "<span>minutes</span>");
-    $("#seconds").html(seconds + "<span>seconds</span>");
+    $("#days").html(days);
+    $("#hours").html(hours);
+    $("#minutes").html(minutes);
+    $("#seconds").html(seconds);
 
   }
 
-  setInterval(function() {
+  $(function () {
     makeTimer();
-  }, 1000);
+
+    setInterval(function() {
+      makeTimer();
+    }, 1000);
+  });
 </script>

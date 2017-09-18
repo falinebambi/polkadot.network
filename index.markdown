@@ -1,7 +1,4 @@
 ---
-title:
-header_title:
-subtitle: |-
 color: dots
 background: header
 extended_header: true
@@ -38,7 +35,11 @@ features:
   width: wide
   subsections:
   - body: |-      
-      More formally, the sale is a "spend-all second-price Dutch auction". In the auction, 5 million out of the total 10 million DOT tokens allocated at Genesis time will be sold. As an auction, by the time is finishes, it finds a "price" in order that all 5 million DOTs are happily sold. The second-price Dutch auction part basically means that the provisional price at which tokens are offered starts high and lowers throughout the auction period in a predefined schedule. The auction closes once the orders received at the current provisional price are enough to purchase the entire 5 million DOTs.      <br><br>      Unlike normal second-price Dutch auctions, you don't bid on a number of DOT tokens given a current provisional price (which will never increase, only decrease), but rather you bid on an amount to spend, and thus will receive more DOT tokens as the auction continues and the price lowers. Everyone who participates receives the same buy-in price, which is the price that the auction ends on.      <br><br>      Pursuant to certain identity requirements forced on us by international regulations, we are happy to allow citizens and organisations of almost all jurisdictions globally the opportunity to participate in this event (we are sad to note that due to legal restrictions, we are unable to accept the contributions of citizens of Japan). We will endeavour to make the certification as cheap, swift and convenient as possible.
+      More formally, the sale is a "spend-all second-price Dutch auction". In the auction, 5 million out of the total 10 million DOT tokens allocated at Genesis time will be sold. As an auction, by the time is finishes, it finds a "price" in order that all 5 million DOTs are happily sold. The second-price Dutch auction part basically means that the provisional price at which tokens are offered starts high and lowers throughout the auction period in a predefined schedule. The auction closes once the orders received at the current provisional price are enough to purchase the entire 5 million DOTs.
+      <br><br>
+      Unlike normal second-price Dutch auctions, you don't bid on a number of DOT tokens given a current provisional price (which will never increase, only decrease), but rather you bid on an amount to spend, and thus will receive more DOT tokens as the auction continues and the price lowers. Everyone who participates receives the same buy-in price, which is the price that the auction ends on.
+      <br><br>
+      Pursuant to certain identity requirements forced on us by international regulations, we are happy to allow citizens and organisations of almost all jurisdictions globally the opportunity to participate in this event (we are sad to note that due to legal restrictions, we are unable to accept the contributions of citizens of Japan). We will endeavour to make the certification as cheap, swift and convenient as possible.
     image: "/assets/dots.svg"
 
 - title: What is it?
