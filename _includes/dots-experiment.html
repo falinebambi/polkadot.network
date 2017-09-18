@@ -1,5 +1,5 @@
 <!doctype html>
-  <head><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script></head>
+  <head></head>
   <body>
 
     <div class="container";>
@@ -9,10 +9,10 @@
     <br>
     <div id="content" class="timer" style="text-align: center;" data-content-field="main-content" data-collection-id="585c64f137c5816afcb642e7" data-edit-main-image="Banner">
      <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1483464902227" id="page-585c64f137c5816afcb642e7"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-82abfe862cb09836c0fd"><div class="sqs-block-content"></div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_8_1483437049739_8605"><div class="sqs-block-content"><div id="timer">
-  <div id="days" class="counter">days</div>
-  <div id="hours" class="counter">hours</div>
-  <div id="minutes" class="counter">minutes</div>
-  <div id="seconds" class="counter">seconds</div>
+  <div id="days" class="counter"></div>
+  <div id="hours" class="counter"></div>
+  <div id="minutes" class="counter"></div>
+  <div id="seconds" class="counter"></div>
 </div></div></div></div></div></div>
     </div>
     <p class="header__subtitle">Please note we require participants in the auction to verify their identity in compliance with OFAC regulation, read more here.
@@ -33,6 +33,7 @@ body {
 }
 
 canvas {
+  background-color: #F7D7D7;
   float: left;
   margin-bottom: 5%;
 }
@@ -45,6 +46,7 @@ canvas {
 .counter {
   display: table-cell;
   margin:1.5%;
+  font-family: 'Abel', sans-serif;
   font-size:50px;
   background-color: white;
   border: 4px solid #F7D7D7;
@@ -57,13 +59,25 @@ canvas {
 
 #timer {
     position: absolute;
-    top:22rem;
-    left:28rem;
+    top:40%;
+    left:35%;
     margin-left: auto;
     margin-right: auto;
 }
 
+#timer span {
+      font-family: 'DIN';
+      letter-spacing: 0px;
+      color: #4D4D4D;
+  	  font-size: 20px;
+      display: block;
+    }
+
 @media (max-width : 667px) {
+  #timer {
+      left: 1.5rem;
+      top: 18rem;
+  }
   #timer div {
       padding: 16px;
       font-size: 26px !important;
@@ -72,18 +86,20 @@ canvas {
         margin-top: 2px;
         font-size: 12px !important;
       }
+    canvas {
+        width: 100%;
+      }
+    .counter {
+      width: 95px;
+      height: 95px;
+    }
   }
-}
+
 
 </style>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script>
-/*
- * CONTROLS
- * Scroll to adjust the size
- * Enjoy!
- */
 
 var canvas = document.getElementsByTagName('canvas')[0];
 var ctx = canvas.getContext('2d');
@@ -201,10 +217,10 @@ if (hours < "10") { hours = "0" + hours; }
 if (minutes < "10") { minutes = "0" + minutes; }
 if (seconds < "10") { seconds = "0" + seconds; }
 
-$("#days").html(days + "<span></span>");
-$("#hours").html(hours + "<span></span>");
-$("#minutes").html(minutes + "<span></span>");
-$("#seconds").html(seconds + "<span></span>");
+$("#days").html(days + "<span>days</span>");
+$("#hours").html(hours + "<span>hours</span>");
+$("#minutes").html(minutes + "<span>minutes</span>");
+$("#seconds").html(seconds + "<span>seconds</span>");
 
 }
 

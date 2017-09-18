@@ -6,44 +6,68 @@ layout: default
   <div class="featureWrap{% if feature.unpad == 'bottom' %} featureWrap--unpadBottom{% endif %} bg--{{ feature.background | default:'pink' }}">
     <section class="feature feature--{{ feature.width }} {{ feature.handle }}">
       {% if feature.title %}<h2 class="feature__title">{{ feature.title }}</h2>{% endif %}
-      {% if feature.subtitle %}<h3 class="feature__subtitle">{{ feature.subtitle }}</h2>{% endif %}
-      {% if feature.body %}<p class="feature__body">{{ feature.body }}</h2>{% endif %}
+      {% if feature.subtitle %}<h3 class="feature__subtitle">{{ feature.subtitle }}</h3>{% endif %}
+      {% if feature.body %}<p class="feature__body">{{ feature.body }}</p>{% endif %}
       {% case feature.handle %}
         {% when 'manage' %}
+        <div class="row">
+          {% include what.html %}
+        </div>
           <div class="manage__content">
             <div class="manage__figures">
               {% for subsection in feature.subsections %}
                 <figure class="manage__figure{% if forloop.first == true %} shown{% endif %}" data-handle="{{ subsection.handle }}">
                   {{ subheading | markdownify }}
                   {{ body | markdownify }}
-                  <img src="{{ subsection.image }}" />
+                  <img src="{{ subsection.image }}" style="max-width: 75%;"/>
                 </figure>
               {% endfor %}
             </div>
             <div class="manage__tabs">
               {% for subsection in feature.subsections %}
                 <div class="manage__tab{% if forloop.first == true %} active{% endif %}" data-handle="{{ subsection.handle }}">
-                  <h5>{{ subsection.title }}</h5>
+                  <h3>{{ subsection.title }}</h3>
                   {{ subsection.body | markdownify }}
                 </div>
               {% endfor %}
             </div>
           </div>
-        {% when 'develop' %}
+        {% when 'vision' %}
           {% for subsection in feature.subsections %}
             <div class="develop__subsection">
-              <div class="develop__subsection__content">
+              <div class="vision__subsection__content">
                 {{ subsection.body | markdownify }}
-                {% if subsection.logos %}
-                  <img src="{{ subsection.logos.image }}" alt="{{ subsection.logos.title }}" class="develop__logos" />
-                {% endif %}
               </div>
-              <figure class="develop__subsection__figure">
-                <img src="{{ subsection.image }}" />
+              <figure class="develop__subsection__figure responsive-image">
+                  <iframe width="660" height="420" src="https://www.youtube.com/embed/lIghiCmHz0U?rel=0" allowfullscreen></iframe>
               </figure>
             </div>
           {% endfor %}
-          {% when 'token' %}
+          {% when 'develop' %}
+            {% for subsection in feature.subsections %}
+              <div class="develop__subsection">
+                <div class="develop__subsection__content">
+                  {{ subsection.body | markdownify }}
+                  <a href="https://polkadot.io" class="feature__button bg--magenta" role="button">Go to Polkadot.io</a>
+                </div>
+                <figure class="develop__subsection__figure">
+                  <img src="{{ subsection.image }}"/>
+                </figure>
+              </div>
+            {% endfor %}
+            {% when 'where' %}
+              {% for subsection in feature.subsections %}
+                <div class="develop__subsection">
+                  <div class="develop__subsection__content">
+                    {{ subsection.body | markdownify }}
+                    <a href="https://polkadot.io" class="feature__button bg--magenta mt" role="button">Go to Polkadot.io</a>
+                  </div>
+                  <figure class="develop__subsection__figure">
+                    <img src="{{ subsection.image }}" style="max-width: 65%; margin-left:auto; margin-right:auto;"/>
+                  </figure>
+                </div>
+              {% endfor %}
+          {% when 'auction' %}
             {% for subsection in feature.subsections %}
               <div class="develop__subsection">
                 <div class="develop__subsection__content">
@@ -54,14 +78,41 @@ layout: default
                 </div>
                 <figure class="develop__subsection__figure">
                   <img src="{{ subsection.image }}" />
+                  {{ subsection.image-text | markdownify }}
                 </figure>
               </div>
             {% endfor %}
-            {% when 'roadmap' %}
+            {% when 'technicals' %}
               {% for subsection in feature.subsections %}
-                <div class="roadmap__subsection">
-                    <img src="{{ subsection.image }}" alt="{{ subsection.title }}" class="roadmap__image" />
+                <div class="develop__subsection">
+                  <figure class="technicals__subsection__figure">
+                    <img src="{{ subsection.image }}" style="max-width: 70%;"/>
+                  </figure>
+                  <div class="develop__subsection__content">
+                    {{ subsection.body | markdownify }}
+                    {% if subsection.logos %}
+                      <img src="{{ subsection.logos.image }}" alt="{{ subsection.logos.title }}" class="develop__logos" />
+                    {% endif %}
+                  </div>
                 </div>
+              {% endfor %}
+            {% when 'friends' %}
+              {% for subsection in feature.subsections %}
+                    {% include friends-icons.html %}
+              {% endfor %}
+              {% when 'cta' %}
+              <div class="header-buttons">
+                <div class="col-md-12 row centered mt1">
+                  <p>Please note we require participants in the auction to verify their identity in compliance with OFAC regulation, read more here. <br><br>You can pre-verify your wallet using the button below</p>
+                  <div class="col-md-6">
+                <a href="https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf" class="feature__button bg--magenta" role="button">Read the Whitepaper</a>
+                </div>
+                <div class="col-md-6">
+                <a href="#" class="feature__button bg--magenta" role="button">Pre-Verify your Identity</a>
+                </div>
+              </div>
+              </div>
+              {% for subsection in feature.subsections %}
               {% endfor %}
           {% when 'video' %}
             {% for subsection in feature.subsections %}
@@ -82,18 +133,24 @@ layout: default
             {% for subsection in feature.subsections %}
               <div class="free__subsection">
                   <img src="{{ subsection.image }}" alt="{{ subsection.title }}" class="free__image" />
-                <h5>{{ subsection.title }}</h5>
-                <small>{{ subsection.body | markdownify }}</small>
+                <h3>{{ subsection.title }}</h3>
+                <p>{{ subsection.body | markdownify }}</p>
               </div>
             {% endfor %}
           </div>
+        {% when 'token' %}
+          <div class="token__subsections">
+            {% for subsection in feature.subsections %}
+              <div class="token__subsection">
+                  <img src="{{ subsection.image }}" alt="{{ subsection.title }}" class="token__image" />
+                <h4>{{ subsection.title }}</h4>
+                <small>{{ subsection.body | markdownify }}</small>
+              </div>
+            {% endfor %}
+            </div>
         {% when 'how' %}
-          <img src="{{ feature.image }}" style="max-width: 80%; margin-left: auto; margin-right: auto;" alt="{{ feature.title }}"/>
-          <a href="https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf" class="feature__button bg--dark-gray" role="button">Read the Whitepaper</a>
-        {% when 'outro' %}
-          {{ feature.body | markdownify }}
+          {% include roles.html %}
       {% endcase %}
-      {% if feature.button %}<a href="{{ page.button.url }}" class="feature__button bg--blue">{{ page.button.title }}</a>{% endif %}
     </section>
   </div>
 {% endfor %}

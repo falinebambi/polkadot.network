@@ -1,0 +1,59 @@
+<div class="dots">
+  <div id="content" class="timer" style="text-align: center;" data-content-field="main-content" data-collection-id="585c64f137c5816afcb642e7" data-edit-main-image="Banner">
+            <div class="sqs-block-content">
+              <h1 class="header__title">Watch this space...</h1>
+              <div id="timer">
+                <div id="days" class="counter"></div>
+                <div id="hours" class="counter"></div>
+                <div id="minutes" class="counter"></div>
+                <div id="seconds" class="counter"></div>
+                <div id="mc_embed_signup">
+                <form action="//kirstynandkirstyn.us13.list-manage.com/subscribe/post?u=4f5461fe75556d88be395190b&amp;id=2d0c830769" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email address..." required>
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4f5461fe75556d88be395190b_2d0c830769" tabindex="-1" value=""></div>
+                    <div class="clear"><input type="submit" value="Update me" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+<script>
+  function makeTimer() {
+
+    var endTime = new Date("September 30, 2017 12:00:00 EST");
+    var endTime = (Date.parse(endTime)) / 1000;
+
+    var now = new Date();
+    var now = (Date.parse(now) / 1000);
+
+    var timeLeft = endTime - now;
+
+    var days = Math.floor(timeLeft / 86400);
+    var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+    var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
+    var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+
+    if (hours < "10") {
+      hours = "0" + hours;
+    }
+    if (minutes < "10") {
+      minutes = "0" + minutes;
+    }
+    if (seconds < "10") {
+      seconds = "0" + seconds;
+    }
+
+    $("#days").html(days + "<span>days</span>");
+    $("#hours").html(hours + "<span>hours</span>");
+    $("#minutes").html(minutes + "<span>minutes</span>");
+    $("#seconds").html(seconds + "<span>seconds</span>");
+
+  }
+
+  setInterval(function() {
+    makeTimer();
+  }, 1000);
+</script>

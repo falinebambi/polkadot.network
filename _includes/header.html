@@ -24,7 +24,7 @@
     {% endif %}
   {% endfor %}
 {% endif %}
-<div class="headerWrap bg--{{ background | default: 'lightest-gray' }}">
+<div class="headerWrap bg--{{ 'white' }}">
   <header class="header{% if page.extended_header %} header--extended{% endif %}">
     <ul class="header__items">
       {% for item in site.data.navigation.header %}

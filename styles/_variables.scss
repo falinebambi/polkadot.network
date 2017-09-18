@@ -11,25 +11,26 @@ $color--leaf:       #8DCF3F;
 $color--pink:       #F7D7D7;
 $color--pinkdots:   #FFFFFF;
 
+$color--magenta:   #D64CA8;
 
 $color--darkest-gray:  #F7D7D7;
 $color--darker-gray:   #5A6575;
 $color--dark-gray:     #4D4D4D;
-$color--gray:          #4D4D4D;
-$color--light-gray:    #D3D8E0;
+$color--gray:          #4D4D4D; // delete// ----------
+$color--light-gray:    #F8F8F8;
 $color--lighter-gray:  #E9ECF0;
-$color--lightest-gray: #4D4D4D;
+$color--lightest-gray: #4D4D4D; // delete// ----------
 
 $color--red:    #E56134;
 
 // typography
 // ----------
 
-$font-size--html:    20px;
-$font-size--html-sm: 18px;
+$font-size--html:    18px;
+$font-size--html-sm: 16px;
 
 $font-size--large:    1.166667em;
-$font-size--small:    0.916667em;
+$font-size--small:    0.91666em;
 $font-size--smaller:  0.833333em;
 
 $font-family--sans-serif: 'Larsseit', sans-serif;
@@ -73,7 +74,7 @@ $gutter: 1.5rem;
 // miscellaneous
 // -------------
 
-$width--logo:         5.75rem;
+$width--logo:         6.75rem;
 $border-radius--base: 0.25em;
 
 $opacity--hover: 0.6;
