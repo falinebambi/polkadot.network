@@ -1762,53 +1762,53 @@ body {
   }
 }
 
-  // dots roadmap
-  // -------------------
+// dots roadmap
+// -------------------
 
 .roadmap {
-    color: $color--dark-gray;
-    background-image: url(/assets/bk-dots.svg);
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    z-index: 1;
-  }
+  color: $color--dark-gray;
+  background-image: url(/assets/bk-dots.svg);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+}
 
-  // Mixins and Placeholders
-  %clearfix {
-  	&:after, &:before {
-  		content: '';
-  		display: block;
-  		width: 100%;
-  		clear: both;
-  	}
-  }
+// Mixins and Placeholders
+%clearfix {
+	&:after, &:before {
+		content: '';
+		display: block;
+		width: 100%;
+		clear: both;
+	}
+}
 
-  @mixin prefix($prop, $val) {
-  	@each $prefix in '-webkit-', '-moz-', '-ms-', '' {
-  		#{$prefix}#{$prop}: $val;
-  	}
-  }
-  *, *:before, *:after {
-  	box-sizing: border-box;
-  	-webkit-box-sizing: border-box;
-  	-moz-box-sizing: border-box;
-  }
+@mixin prefix($prop, $val) {
+	@each $prefix in '-webkit-', '-moz-', '-ms-', '' {
+		#{$prefix}#{$prop}: $val;
+	}
+}
+*, *:before, *:after {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
 
 
-  // Friends
-  .friends-icons{
-    margin-left: 10%;
-  }
-  .row-two {
-    padding-left: 8%;
-    padding-top: 1%;
-  }
+// Friends
+.friends-icons{
+  margin-left: 10%;
+}
+.row-two {
+  padding-left: 8%;
+  padding-top: 1%;
+}
 
-  .friends-icons > .featureWrap {
-    height: 800px;
-    background-color: $color--dark-gray;
+.friends-icons > .featureWrap {
+  height: 800px;
+  background-color: $color--dark-gray;
 }
 
  svg:hover #icon {
